@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c150de9335438465ec93c17a24add8ed {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    
+                <style>
+                    #float_image_5225ef46073eca9fc4967d44a824d459 {
+                        position:absolute;
+                        bottom:80%;
+                        left:65%;
+                        }
+                </style>
+            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c150de9335438465ec93c17a24add8ed" ></div>
+        
+    
+            <img id="float_image_5225ef46073eca9fc4967d44a824d459" alt="float_image"
+                 src="https://github.com/jorgeiv500/mapas/blob/main/logo-udes-sm.png?raw=true"
+                 style="z-index: 999999">
+            </img>
+            
+</body>
+<script>
+    
+    
+            var map_c150de9335438465ec93c17a24add8ed = L.map(
+                "map_c150de9335438465ec93c17a24add8ed",
+                {
+                    center: [7.12539, -73.1198],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6556beb1711ccc89e55eff1a96f71ad0 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+        function geo_json_8eec6c7378cd6e527637836c2b979084_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#001f3f", "fillColor": "#001f3f"};
+            }
+        }
+
+        function geo_json_8eec6c7378cd6e527637836c2b979084_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8eec6c7378cd6e527637836c2b979084 = L.geoJson(null, {
+                onEachFeature: geo_json_8eec6c7378cd6e527637836c2b979084_onEachFeature,
+            
+                style: geo_json_8eec6c7378cd6e527637836c2b979084_styler,
+        });
+
+        function geo_json_8eec6c7378cd6e527637836c2b979084_add (data) {
+            geo_json_8eec6c7378cd6e527637836c2b979084
+                .addData(data)
+                .addTo(map_c150de9335438465ec93c17a24add8ed);
+        }
+            geo_json_8eec6c7378cd6e527637836c2b979084_add({"bbox": [-78.990935, -4.298187, -66.876326, 12.437303], "features": [{"bbox": [-78.990935, -4.298187, -66.876326, 12.437303], "geometry": {"coordinates": [[[-75.373223, -0.152032], [-75.801466, 0.084801], [-76.292314, 0.416047], [-76.57638, 0.256936], [-77.424984, 0.395687], [-77.668613, 0.825893], [-77.855061, 0.809925], [-78.855259, 1.380924], [-78.990935, 1.69137], [-78.617831, 1.766404], [-78.662118, 2.267355], [-78.42761, 2.629556], [-77.931543, 2.696606], [-77.510431, 3.325017], [-77.12769, 3.849636], [-77.496272, 4.087606], [-77.307601, 4.667984], [-77.533221, 5.582812], [-77.318815, 5.845354], [-77.476661, 6.691116], [-77.881571, 7.223771], [-77.753414, 7.70984], [-77.431108, 7.638061], [-77.242566, 7.935278], [-77.474723, 8.524286], [-77.353361, 8.670505], [-76.836674, 8.638749], [-76.086384, 9.336821], [-75.6746, 9.443248], [-75.664704, 9.774003], [-75.480426, 10.61899], [-74.906895, 11.083045], [-74.276753, 11.102036], [-74.197223, 11.310473], [-73.414764, 11.227015], [-72.627835, 11.731972], [-72.238195, 11.95555], [-71.75409, 12.437303], [-71.399822, 12.376041], [-71.137461, 12.112982], [-71.331584, 11.776284], [-71.973922, 11.608672], [-72.227575, 11.108702], [-72.614658, 10.821975], [-72.905286, 10.450344], [-73.027604, 9.73677], [-73.304952, 9.152], [-72.78873, 9.085027], [-72.660495, 8.625288], [-72.439862, 8.405275], [-72.360901, 8.002638], [-72.479679, 7.632506], [-72.444487, 7.423785], [-72.198352, 7.340431], [-71.960176, 6.991615], [-70.674234, 7.087785], [-70.093313, 6.960376], [-69.38948, 6.099861], [-68.985319, 6.206805], [-68.265052, 6.153268], [-67.695087, 6.267318], [-67.34144, 6.095468], [-67.521532, 5.55687], [-67.744697, 5.221129], [-67.823012, 4.503937], [-67.621836, 3.839482], [-67.337564, 3.542342], [-67.303173, 3.318454], [-67.809938, 2.820655], [-67.447092, 2.600281], [-67.181294, 2.250638], [-66.876326, 1.253361], [-67.065048, 1.130112], [-67.259998, 1.719999], [-67.53781, 2.037163], [-67.868565, 1.692455], [-69.816973, 1.714805], [-69.804597, 1.089081], [-69.218638, 0.985677], [-69.252434, 0.602651], [-69.452396, 0.706159], [-70.015566, 0.541414], [-70.020656, -0.185156], [-69.577065, -0.549992], [-69.420486, -1.122619], [-69.444102, -1.556287], [-69.893635, -4.298187], [-70.394044, -3.766591], [-70.692682, -3.742872], [-70.047709, -2.725156], [-70.813476, -2.256865], [-71.413646, -2.342802], [-71.774761, -2.16979], [-72.325787, -2.434218], [-73.070392, -2.308954], [-73.659504, -1.260491], [-74.122395, -1.002833], [-74.441601, -0.53082], [-75.106625, -0.057205], [-75.373223, -0.152032]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            var marker_752e6100312bb9bed3eb6d01a471db41 = L.marker(
+                [7.1200078, -73.1138687],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_57d8f802f34381e82075ebfe325af4f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_752e6100312bb9bed3eb6d01a471db41.setIcon(icon_57d8f802f34381e82075ebfe325af4f0);
+        
+    
+        var popup_63572f3e6fedbfc36ded2a7ec623164d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8bd9f9b8e430a52bca3e1fbf9a28a7f6 = $(`<div id="html_8bd9f9b8e430a52bca3e1fbf9a28a7f6" style="width: 100.0%; height: 100.0%;">Calle 42 # 28- 19 SANTANDER BUCARAMANGA</div>`)[0];
+            popup_63572f3e6fedbfc36ded2a7ec623164d.setContent(html_8bd9f9b8e430a52bca3e1fbf9a28a7f6);
+        
+
+        marker_752e6100312bb9bed3eb6d01a471db41.bindPopup(popup_63572f3e6fedbfc36ded2a7ec623164d)
+        ;
+
+        
+    
+    
+            var marker_6e5e9869c5e5bf6e481865bb7d5b7227 = L.marker(
+                [4.7272285, -74.0397662],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_372bde53de2c45090bf53a332c577675 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_6e5e9869c5e5bf6e481865bb7d5b7227.setIcon(icon_372bde53de2c45090bf53a332c577675);
+        
+    
+        var popup_e7cb367497f3c7d857ace10fce687a1d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fc670d212bd18104a54ad3a494f473dc = $(`<div id="html_fc670d212bd18104a54ad3a494f473dc" style="width: 100.0%; height: 100.0%;">calle 146 No 13 - 83 BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_e7cb367497f3c7d857ace10fce687a1d.setContent(html_fc670d212bd18104a54ad3a494f473dc);
+        
+
+        marker_6e5e9869c5e5bf6e481865bb7d5b7227.bindPopup(popup_e7cb367497f3c7d857ace10fce687a1d)
+        ;
+
+        
+    
+    
+            var marker_a52f258606c0ed05bed289e65b72dd7f = L.marker(
+                [4.6570501, -74.1047608],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_a9e0fa44a9994e8e8041b057ceba2f33 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_a52f258606c0ed05bed289e65b72dd7f.setIcon(icon_a9e0fa44a9994e8e8041b057ceba2f33);
+        
+    
+        var popup_800263f9915f843009b73f1e302bb0a1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_682baa7f2ee004ef1b29e0dfae488c16 = $(`<div id="html_682baa7f2ee004ef1b29e0dfae488c16" style="width: 100.0%; height: 100.0%;">AV CALLE 26 # 68 B -70 BOGOTA D.C AEROPUERTO EL DORADO</div>`)[0];
+            popup_800263f9915f843009b73f1e302bb0a1.setContent(html_682baa7f2ee004ef1b29e0dfae488c16);
+        
+
+        marker_a52f258606c0ed05bed289e65b72dd7f.bindPopup(popup_800263f9915f843009b73f1e302bb0a1)
+        ;
+
+        
+    
+    
+            var marker_d80226165c13cc65ae3b9c7a1ea420dc = L.marker(
+                [3.3368935, -76.5412435],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_7c1ccbcda926ed96543e373f558394ae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_d80226165c13cc65ae3b9c7a1ea420dc.setIcon(icon_7c1ccbcda926ed96543e373f558394ae);
+        
+    
+        var popup_cf820e26a54be87afce9f2d667f0b7cf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c0279cdc9a986f346d700152cf5ccdc6 = $(`<div id="html_c0279cdc9a986f346d700152cf5ccdc6" style="width: 100.0%; height: 100.0%;">calle 10A 125 41 VALLE DEL CAUCA CALI</div>`)[0];
+            popup_cf820e26a54be87afce9f2d667f0b7cf.setContent(html_c0279cdc9a986f346d700152cf5ccdc6);
+        
+
+        marker_d80226165c13cc65ae3b9c7a1ea420dc.bindPopup(popup_cf820e26a54be87afce9f2d667f0b7cf)
+        ;
+
+        
+    
+    
+            var marker_072d87e45c64e0d45e723d31887d8e36 = L.marker(
+                [4.680468, -74.0447172],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_9fd4726d0abcce10e2fd580f1488c8c5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_072d87e45c64e0d45e723d31887d8e36.setIcon(icon_9fd4726d0abcce10e2fd580f1488c8c5);
+        
+    
+        var popup_04ca4d0f9f5582d0eeb5ad6cb0e7ce48 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e5baf2064e9a04c166b7b7326a31324 = $(`<div id="html_8e5baf2064e9a04c166b7b7326a31324" style="width: 100.0%; height: 100.0%;">CRA 11 NUM 97 - 23 OF. 402 - 405 BOGOTA D.C AEROPUERTO EL DORADO</div>`)[0];
+            popup_04ca4d0f9f5582d0eeb5ad6cb0e7ce48.setContent(html_8e5baf2064e9a04c166b7b7326a31324);
+        
+
+        marker_072d87e45c64e0d45e723d31887d8e36.bindPopup(popup_04ca4d0f9f5582d0eeb5ad6cb0e7ce48)
+        ;
+
+        
+    
+    
+            var marker_c38e437f300e9269b4c14f4c62641c92 = L.marker(
+                [33.3813972, -86.6694689],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_7c4478aa554552f91c63bdc787783cf6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c38e437f300e9269b4c14f4c62641c92.setIcon(icon_7c4478aa554552f91c63bdc787783cf6);
+        
+    
+        var popup_0e6e2fa83f918ba0627a59e4e8ed7982 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1d6bdb3958ebfa3eeea34cbb15004cc2 = $(`<div id="html_1d6bdb3958ebfa3eeea34cbb15004cc2" style="width: 100.0%; height: 100.0%;">5724 HIGHWAY 280 E No Aplica BIRMINGHAM AL</div>`)[0];
+            popup_0e6e2fa83f918ba0627a59e4e8ed7982.setContent(html_1d6bdb3958ebfa3eeea34cbb15004cc2);
+        
+
+        marker_c38e437f300e9269b4c14f4c62641c92.bindPopup(popup_0e6e2fa83f918ba0627a59e4e8ed7982)
+        ;
+
+        
+    
+    
+            var marker_c8f134dce7a1718d18915341afd7879d = L.marker(
+                [4.6774218, -74.0534427],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_fbf169a3773d0d992516e8583dd0ee5e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_c8f134dce7a1718d18915341afd7879d.setIcon(icon_fbf169a3773d0d992516e8583dd0ee5e);
+        
+    
+        var popup_c140de4e643d18509ea10f4dd799a18f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_32d291a3fb19649583a6944ca50f5f25 = $(`<div id="html_32d291a3fb19649583a6944ca50f5f25" style="width: 100.0%; height: 100.0%;">CALLE 93 No 16-43 BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_c140de4e643d18509ea10f4dd799a18f.setContent(html_32d291a3fb19649583a6944ca50f5f25);
+        
+
+        marker_c8f134dce7a1718d18915341afd7879d.bindPopup(popup_c140de4e643d18509ea10f4dd799a18f)
+        ;
+
+        
+    
+    
+            var marker_be70819912cd5ca82ec54037d378e5fc = L.marker(
+                [19.3954246, -99.1740938],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_868743978b0bd91b53d099368d292c4a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_be70819912cd5ca82ec54037d378e5fc.setIcon(icon_868743978b0bd91b53d099368d292c4a);
+        
+    
+        var popup_9075cdab5d210b27c628dc258688dd3d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a0f449787e59714be0e9d86861f7c336 = $(`<div id="html_a0f449787e59714be0e9d86861f7c336" style="width: 100.0%; height: 100.0%;">Montecito No 38 Piso 4 Oficina 22 No Aplica Ciudad de México</div>`)[0];
+            popup_9075cdab5d210b27c628dc258688dd3d.setContent(html_a0f449787e59714be0e9d86861f7c336);
+        
+
+        marker_be70819912cd5ca82ec54037d378e5fc.bindPopup(popup_9075cdab5d210b27c628dc258688dd3d)
+        ;
+
+        
+    
+    
+            var marker_09895758bedaf5402813d6a9fe81faf6 = L.marker(
+                [4.7542262, -74.067146],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_357ba43125e310f5ab951637a6f262de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_09895758bedaf5402813d6a9fe81faf6.setIcon(icon_357ba43125e310f5ab951637a6f262de);
+        
+    
+        var popup_fa4072c4a4aa4bf85f4d9b73bceffe91 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_63c23e2d5b0bc561334dd8e14f464f33 = $(`<div id="html_63c23e2d5b0bc561334dd8e14f464f33" style="width: 100.0%; height: 100.0%;">Carrera 74A # 168A-85 Interior 1 Apto 202 BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_fa4072c4a4aa4bf85f4d9b73bceffe91.setContent(html_63c23e2d5b0bc561334dd8e14f464f33);
+        
+
+        marker_09895758bedaf5402813d6a9fe81faf6.bindPopup(popup_fa4072c4a4aa4bf85f4d9b73bceffe91)
+        ;
+
+        
+    
+    
+            var marker_17345c84f1b79e6f702fb2554b474981 = L.marker(
+                [4.7107724, -74.0300352],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_8614137518a301fe7a32d502703704e6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_17345c84f1b79e6f702fb2554b474981.setIcon(icon_8614137518a301fe7a32d502703704e6);
+        
+    
+        var popup_de4cb1658a70608807ac439a77d37087 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6a7fa89f2cb0c63e5f879f2638b958cd = $(`<div id="html_6a7fa89f2cb0c63e5f879f2638b958cd" style="width: 100.0%; height: 100.0%;">Cra. 7b BIS #132-28, BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_de4cb1658a70608807ac439a77d37087.setContent(html_6a7fa89f2cb0c63e5f879f2638b958cd);
+        
+
+        marker_17345c84f1b79e6f702fb2554b474981.bindPopup(popup_de4cb1658a70608807ac439a77d37087)
+        ;
+
+        
+    
+    
+            var marker_e319e8c8c8178458a1759ed0fdcfae08 = L.marker(
+                [7.119349, -73.1227416],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_0f838ecc1d86a2abe144379adc00333f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e319e8c8c8178458a1759ed0fdcfae08.setIcon(icon_0f838ecc1d86a2abe144379adc00333f);
+        
+    
+        var popup_04fe4f8ca078c98783a3fbabbe1f66d2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b26e1b840883bb367cc8d9d18999e58e = $(`<div id="html_b26e1b840883bb367cc8d9d18999e58e" style="width: 100.0%; height: 100.0%;">CL 35 19 41 OF 308 TO NORTE SANTANDER BUCARAMANGA</div>`)[0];
+            popup_04fe4f8ca078c98783a3fbabbe1f66d2.setContent(html_b26e1b840883bb367cc8d9d18999e58e);
+        
+
+        marker_e319e8c8c8178458a1759ed0fdcfae08.bindPopup(popup_04fe4f8ca078c98783a3fbabbe1f66d2)
+        ;
+
+        
+    
+    
+            var marker_6d0dc76602c386daacc9b51224727630 = L.marker(
+                [7.1188569, -73.12307],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_e90331b6de59814ecee5688dc6f61f57 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_6d0dc76602c386daacc9b51224727630.setIcon(icon_e90331b6de59814ecee5688dc6f61f57);
+        
+    
+        var popup_24addd5bc9bda89d53a31089cda84786 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e7deecaa8bb130349483feca729b8bcf = $(`<div id="html_e7deecaa8bb130349483feca729b8bcf" style="width: 100.0%; height: 100.0%;">Carrera 19 # 36 - 20 Piso 2 SANTANDER BUCARAMANGA</div>`)[0];
+            popup_24addd5bc9bda89d53a31089cda84786.setContent(html_e7deecaa8bb130349483feca729b8bcf);
+        
+
+        marker_6d0dc76602c386daacc9b51224727630.bindPopup(popup_24addd5bc9bda89d53a31089cda84786)
+        ;
+
+        
+    
+    
+            var marker_d0b12bfefc3abde6e8761322c45a3dac = L.marker(
+                [4.648594, -74.104466],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_f0ab48e37f88e31bb4c9f56e7e695818 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_d0b12bfefc3abde6e8761322c45a3dac.setIcon(icon_f0ab48e37f88e31bb4c9f56e7e695818);
+        
+    
+        var popup_3c985ec49d0a9f2a27318a8e456bf9ad = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e5fb4a44a0545655c9bd8e668352b0fd = $(`<div id="html_e5fb4a44a0545655c9bd8e668352b0fd" style="width: 100.0%; height: 100.0%;">CL 103 69B 43 ETAPA V BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_3c985ec49d0a9f2a27318a8e456bf9ad.setContent(html_e5fb4a44a0545655c9bd8e668352b0fd);
+        
+
+        marker_d0b12bfefc3abde6e8761322c45a3dac.bindPopup(popup_3c985ec49d0a9f2a27318a8e456bf9ad)
+        ;
+
+        
+    
+    
+            var marker_73849d35d34f814952450706bf9b43cf = L.marker(
+                [4.8108761, -74.0991054],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_fe2bca6c4defb247c13bf98b5201597c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_73849d35d34f814952450706bf9b43cf.setIcon(icon_fe2bca6c4defb247c13bf98b5201597c);
+        
+    
+        var popup_e24d2b73039a950c5636eeaf262ae24c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1ea09b241db2635b32d1091bf92a4d4b = $(`<div id="html_1ea09b241db2635b32d1091bf92a4d4b" style="width: 100.0%; height: 100.0%;">Calle 14 # 3-41 CUNDINAMARCA COTA</div>`)[0];
+            popup_e24d2b73039a950c5636eeaf262ae24c.setContent(html_1ea09b241db2635b32d1091bf92a4d4b);
+        
+
+        marker_73849d35d34f814952450706bf9b43cf.bindPopup(popup_e24d2b73039a950c5636eeaf262ae24c)
+        ;
+
+        
+    
+    
+            var marker_2d8f530091a532ade98c9ed1aff88186 = L.marker(
+                [4.6958368, -74.0432486],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_2af4f8a52fa49ec9571e5c33f267e3db = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_2d8f530091a532ade98c9ed1aff88186.setIcon(icon_2af4f8a52fa49ec9571e5c33f267e3db);
+        
+    
+        var popup_05a21133aaaf89e56aee265d1f01fbdb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f350cb88ca7a8ea01019260bd50acd8c = $(`<div id="html_f350cb88ca7a8ea01019260bd50acd8c" style="width: 100.0%; height: 100.0%;">Calle 114a 70a - 16 BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_05a21133aaaf89e56aee265d1f01fbdb.setContent(html_f350cb88ca7a8ea01019260bd50acd8c);
+        
+
+        marker_2d8f530091a532ade98c9ed1aff88186.bindPopup(popup_05a21133aaaf89e56aee265d1f01fbdb)
+        ;
+
+        
+    
+    
+            var marker_3dd5246f30867ce165384281d51d1614 = L.marker(
+                [4.8491691, -74.0298151],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_7f5bdb4827fa7133c384b0c32de13efb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_3dd5246f30867ce165384281d51d1614.setIcon(icon_7f5bdb4827fa7133c384b0c32de13efb);
+        
+    
+        var popup_f51faa02659bcdc4b73d528ac6e01147 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9762c3fdce4c5a8fedc145c92d940138 = $(`<div id="html_9762c3fdce4c5a8fedc145c92d940138" style="width: 100.0%; height: 100.0%;">Autopista Norte Km. 20 Vía Chía, Campus UNICOC CUNDINAMARCA CHIA</div>`)[0];
+            popup_f51faa02659bcdc4b73d528ac6e01147.setContent(html_9762c3fdce4c5a8fedc145c92d940138);
+        
+
+        marker_3dd5246f30867ce165384281d51d1614.bindPopup(popup_f51faa02659bcdc4b73d528ac6e01147)
+        ;
+
+        
+    
+    
+            var marker_2e149180acc397d7486b14b7c7a20711 = L.marker(
+                [4.6476774, -74.0710671],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_59bb6950d1e0026ee2b84a3bf8080e41 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_2e149180acc397d7486b14b7c7a20711.setIcon(icon_59bb6950d1e0026ee2b84a3bf8080e41);
+        
+    
+        var popup_c265128aaa5bac6c2f946db752f6ea23 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8de5c337bac27bff2619649f1ed396dc = $(`<div id="html_8de5c337bac27bff2619649f1ed396dc" style="width: 100.0%; height: 100.0%;">DIAGONAL 60 # 22-20 BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_c265128aaa5bac6c2f946db752f6ea23.setContent(html_8de5c337bac27bff2619649f1ed396dc);
+        
+
+        marker_2e149180acc397d7486b14b7c7a20711.bindPopup(popup_c265128aaa5bac6c2f946db752f6ea23)
+        ;
+
+        
+    
+    
+            var marker_637972f65d397fee29525e4aa5ceb6cd = L.marker(
+                [4.6498835, -74.0705354],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_a54415bce6d2cc5fa948b74532eec62f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_637972f65d397fee29525e4aa5ceb6cd.setIcon(icon_a54415bce6d2cc5fa948b74532eec62f);
+        
+    
+        var popup_dc495175e814c174bf45feb28901f44f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_11646be4105cda1bbdde317a5535e402 = $(`<div id="html_11646be4105cda1bbdde317a5535e402" style="width: 100.0%; height: 100.0%;">CALLE 62 No. 20-46 BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_dc495175e814c174bf45feb28901f44f.setContent(html_11646be4105cda1bbdde317a5535e402);
+        
+
+        marker_637972f65d397fee29525e4aa5ceb6cd.bindPopup(popup_dc495175e814c174bf45feb28901f44f)
+        ;
+
+        
+    
+    
+            var marker_5d5710ad9bd908bc0a80f02daaf3ef06 = L.marker(
+                [4.7316722, -74.0236733],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_12a18d4626ef00de117905718b97af7b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_5d5710ad9bd908bc0a80f02daaf3ef06.setIcon(icon_12a18d4626ef00de117905718b97af7b);
+        
+    
+        var popup_333af9d4856f504f544a6be866c7aeb3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2b870173de54d45454b1ef4060b54087 = $(`<div id="html_2b870173de54d45454b1ef4060b54087" style="width: 100.0%; height: 100.0%;">CRA 7 No 156-10 Ofc. 1706 BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_333af9d4856f504f544a6be866c7aeb3.setContent(html_2b870173de54d45454b1ef4060b54087);
+        
+
+        marker_5d5710ad9bd908bc0a80f02daaf3ef06.bindPopup(popup_333af9d4856f504f544a6be866c7aeb3)
+        ;
+
+        
+    
+    
+            var marker_ce75d713355c3401543bb3027e573419 = L.marker(
+                [6.220142, -75.6039884],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_caa63b57c7fd412153d93f9862e31eff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_ce75d713355c3401543bb3027e573419.setIcon(icon_caa63b57c7fd412153d93f9862e31eff);
+        
+    
+        var popup_0aeb5a9a4ccf6613f17e0672a99b7237 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a9ca9c02578ae537e4483dfcd90244b9 = $(`<div id="html_a9ca9c02578ae537e4483dfcd90244b9" style="width: 100.0%; height: 100.0%;">CR 81 B 7 A 40 IN 13 ANTIOQUIA MEDELLIN</div>`)[0];
+            popup_0aeb5a9a4ccf6613f17e0672a99b7237.setContent(html_a9ca9c02578ae537e4483dfcd90244b9);
+        
+
+        marker_ce75d713355c3401543bb3027e573419.bindPopup(popup_0aeb5a9a4ccf6613f17e0672a99b7237)
+        ;
+
+        
+    
+    
+            var marker_5a30a22db5bd4ebbab8d59a518e6d8f6 = L.marker(
+                [4.6913889, -74.0301372],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_1863b2ac63e5df641c116e2828f9ef18 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_5a30a22db5bd4ebbab8d59a518e6d8f6.setIcon(icon_1863b2ac63e5df641c116e2828f9ef18);
+        
+    
+        var popup_952b61200a8e6ed71efef0f9208b2c03 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ead6d4b9dadb47cec13c0fa666d4c4ce = $(`<div id="html_ead6d4b9dadb47cec13c0fa666d4c4ce" style="width: 100.0%; height: 100.0%;">Transv 55A #114A - 66 Barrio ilarco BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_952b61200a8e6ed71efef0f9208b2c03.setContent(html_ead6d4b9dadb47cec13c0fa666d4c4ce);
+        
+
+        marker_5a30a22db5bd4ebbab8d59a518e6d8f6.bindPopup(popup_952b61200a8e6ed71efef0f9208b2c03)
+        ;
+
+        
+    
+    
+            var marker_6707250a7209feaac09dee1efa7227cd = L.marker(
+                [4.6288584, -74.0835544],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_53ef8e6e8fcbf5cbbd890acc75cfc3d3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_6707250a7209feaac09dee1efa7227cd.setIcon(icon_53ef8e6e8fcbf5cbbd890acc75cfc3d3);
+        
+    
+        var popup_7eba6ce09bc56fbd851654ee152a4d96 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_69b20551f415af23f8fe9e4a78b748f5 = $(`<div id="html_69b20551f415af23f8fe9e4a78b748f5" style="width: 100.0%; height: 100.0%;">CR 35 25 33 T 2 AP 1511 BRR MIRADOR DE TACAY BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_7eba6ce09bc56fbd851654ee152a4d96.setContent(html_69b20551f415af23f8fe9e4a78b748f5);
+        
+
+        marker_6707250a7209feaac09dee1efa7227cd.bindPopup(popup_7eba6ce09bc56fbd851654ee152a4d96)
+        ;
+
+        
+    
+    
+            var marker_b68c4e1bda01d3ce469ead06ca7f06bc = L.marker(
+                [7.1195506, -73.1234477],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_efaa90d42a77edd110c0a7943b2b614b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_b68c4e1bda01d3ce469ead06ca7f06bc.setIcon(icon_efaa90d42a77edd110c0a7943b2b614b);
+        
+    
+        var popup_1674f03badcaa2922f93f355d59a98c6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e0b081772f08563cfa5c5a62b7625fc7 = $(`<div id="html_e0b081772f08563cfa5c5a62b7625fc7" style="width: 100.0%; height: 100.0%;">Carrera 19 No. 35-02 oficina 206 SANTANDER BUCARAMANGA</div>`)[0];
+            popup_1674f03badcaa2922f93f355d59a98c6.setContent(html_e0b081772f08563cfa5c5a62b7625fc7);
+        
+
+        marker_b68c4e1bda01d3ce469ead06ca7f06bc.bindPopup(popup_1674f03badcaa2922f93f355d59a98c6)
+        ;
+
+        
+    
+    
+            var marker_80728bc4c80c5b9ac6d1eb846c12ebe9 = L.marker(
+                [4.6979643, -74.1235366],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_e73b2c1b74bff2950aae39564c8cf676 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_80728bc4c80c5b9ac6d1eb846c12ebe9.setIcon(icon_e73b2c1b74bff2950aae39564c8cf676);
+        
+    
+        var popup_ad9b7d40f82992b7681fd509565907d2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_64e0667e665e7ae1ba496d41099f32ec = $(`<div id="html_64e0667e665e7ae1ba496d41099f32ec" style="width: 100.0%; height: 100.0%;">calle 66 numero 103-45 BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_ad9b7d40f82992b7681fd509565907d2.setContent(html_64e0667e665e7ae1ba496d41099f32ec);
+        
+
+        marker_80728bc4c80c5b9ac6d1eb846c12ebe9.bindPopup(popup_ad9b7d40f82992b7681fd509565907d2)
+        ;
+
+        
+    
+    
+            var marker_69f6ad8d905558a976e611d00cacf770 = L.marker(
+                [7.0613959, -73.1155634],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_6c014506ec25a126cde573cb5d6f6c63 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_69f6ad8d905558a976e611d00cacf770.setIcon(icon_6c014506ec25a126cde573cb5d6f6c63);
+        
+    
+        var popup_2b8409fbf80323f9c03489e4a84168bb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_755c8ce6fd183fc2084c9b129469fba5 = $(`<div id="html_755c8ce6fd183fc2084c9b129469fba5" style="width: 100.0%; height: 100.0%;">Km 2, 176 anillo vial Natura Ecoparque Empresarial Torre 1 oficina 319 SANTANDER FLORIDABLANCA</div>`)[0];
+            popup_2b8409fbf80323f9c03489e4a84168bb.setContent(html_755c8ce6fd183fc2084c9b129469fba5);
+        
+
+        marker_69f6ad8d905558a976e611d00cacf770.bindPopup(popup_2b8409fbf80323f9c03489e4a84168bb)
+        ;
+
+        
+    
+    
+            var marker_5feae6be6e1d2e89289bc7c37088a715 = L.marker(
+                [4.7216799, -74.0269368],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_5d5820cc81d06e90dea94a6d0ae11250 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_5feae6be6e1d2e89289bc7c37088a715.setIcon(icon_5d5820cc81d06e90dea94a6d0ae11250);
+        
+    
+        var popup_4aaca26573a94c8b3773f96c0969c705 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_79ef24dfba59c87772774d591a9ed41b = $(`<div id="html_79ef24dfba59c87772774d591a9ed41b" style="width: 100.0%; height: 100.0%;">Calle 146 No. 7-64 Oficina 704 BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_4aaca26573a94c8b3773f96c0969c705.setContent(html_79ef24dfba59c87772774d591a9ed41b);
+        
+
+        marker_5feae6be6e1d2e89289bc7c37088a715.bindPopup(popup_4aaca26573a94c8b3773f96c0969c705)
+        ;
+
+        
+    
+    
+            var marker_d46312ae7d9c0c90275b86828723f131 = L.marker(
+                [7.0882981, -73.0759446],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_e1b1cc665fa7ec1cd9b133826ece680d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_d46312ae7d9c0c90275b86828723f131.setIcon(icon_e1b1cc665fa7ec1cd9b133826ece680d);
+        
+    
+        var popup_73779d2b101540b2a285989d6c564e17 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f35df7a70b505d6aa1b741e44562acbc = $(`<div id="html_f35df7a70b505d6aa1b741e44562acbc" style="width: 100.0%; height: 100.0%;">TV 154 157 65 TO 4 AP 202 CONJ ALTOS DEL VALLE SANTANDER FLORIDABLANCA</div>`)[0];
+            popup_73779d2b101540b2a285989d6c564e17.setContent(html_f35df7a70b505d6aa1b741e44562acbc);
+        
+
+        marker_d46312ae7d9c0c90275b86828723f131.bindPopup(popup_73779d2b101540b2a285989d6c564e17)
+        ;
+
+        
+    
+    
+            var marker_748a92dfe3fe0c7a27ec4163d1090c6f = L.marker(
+                [7.119349, -73.1227416],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_ee1b8750c846289ecf91dae83395df4d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_748a92dfe3fe0c7a27ec4163d1090c6f.setIcon(icon_ee1b8750c846289ecf91dae83395df4d);
+        
+    
+        var popup_821208acf9ac73e8daf053333b384409 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d6c31be866999411eb94a1249071691f = $(`<div id="html_d6c31be866999411eb94a1249071691f" style="width: 100.0%; height: 100.0%;">MULTIFAMILIARES PUERTA DEL SOL ENT 4 BL 16A APTO 1-1 SANTANDER BUCARAMANGA</div>`)[0];
+            popup_821208acf9ac73e8daf053333b384409.setContent(html_d6c31be866999411eb94a1249071691f);
+        
+
+        marker_748a92dfe3fe0c7a27ec4163d1090c6f.bindPopup(popup_821208acf9ac73e8daf053333b384409)
+        ;
+
+        
+    
+    
+            var marker_715c667ec71f8c37ed8a53c33b5f621c = L.marker(
+                [4.6695216, -74.1039687],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_72d51847038a8c06dc2bd04a76a241ba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_715c667ec71f8c37ed8a53c33b5f621c.setIcon(icon_72d51847038a8c06dc2bd04a76a241ba);
+        
+    
+        var popup_02f882ee79f47cd12725de909725cfe4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8b477d7877fe0871aa3353be6a89490d = $(`<div id="html_8b477d7877fe0871aa3353be6a89490d" style="width: 100.0%; height: 100.0%;">AK 70 53 73 BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_02f882ee79f47cd12725de909725cfe4.setContent(html_8b477d7877fe0871aa3353be6a89490d);
+        
+
+        marker_715c667ec71f8c37ed8a53c33b5f621c.bindPopup(popup_02f882ee79f47cd12725de909725cfe4)
+        ;
+
+        
+    
+    
+            var marker_7c7476149e9a9f918b0a201f5ff980c7 = L.marker(
+                [7.0803339, -73.171039],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_983d8c4cf9b810f495a5bbb5362f58e1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_7c7476149e9a9f918b0a201f5ff980c7.setIcon(icon_983d8c4cf9b810f495a5bbb5362f58e1);
+        
+    
+        var popup_910f1c6c84ca20b85fef4f0157d0362b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a40cbd79a3b868b65b444c23809a63c2 = $(`<div id="html_a40cbd79a3b868b65b444c23809a63c2" style="width: 100.0%; height: 100.0%;">URB LA ARBOLEDA CA 26 BRR EL POBLADO SANTANDER GIRON</div>`)[0];
+            popup_910f1c6c84ca20b85fef4f0157d0362b.setContent(html_a40cbd79a3b868b65b444c23809a63c2);
+        
+
+        marker_7c7476149e9a9f918b0a201f5ff980c7.bindPopup(popup_910f1c6c84ca20b85fef4f0157d0362b)
+        ;
+
+        
+    
+    
+            var marker_5f38ec5768c0f92ed082ab7599967468 = L.marker(
+                [4.7020669, -74.029804],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_8652b5f0544cdfc8a497a1ca4b0d8284 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_5f38ec5768c0f92ed082ab7599967468.setIcon(icon_8652b5f0544cdfc8a497a1ca4b0d8284);
+        
+    
+        var popup_61086a025021da9cd523adb6eb8fe792 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6156aee4a158c52f626f67c68f354d44 = $(`<div id="html_6156aee4a158c52f626f67c68f354d44" style="width: 100.0%; height: 100.0%;">Cra 7 A No. 126A - 55 BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_61086a025021da9cd523adb6eb8fe792.setContent(html_6156aee4a158c52f626f67c68f354d44);
+        
+
+        marker_5f38ec5768c0f92ed082ab7599967468.bindPopup(popup_61086a025021da9cd523adb6eb8fe792)
+        ;
+
+        
+    
+    
+            var marker_02397f23f49af4b5a5b49fcea1ef36d4 = L.marker(
+                [4.6241213, -74.0772684],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_29f9f62deb2216443b1e07a3e18353ee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_02397f23f49af4b5a5b49fcea1ef36d4.setIcon(icon_29f9f62deb2216443b1e07a3e18353ee);
+        
+    
+        var popup_9141df7014683fd1084c3b734d89dacf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c253c9ad5744ee0865b1ae495bf29d07 = $(`<div id="html_c253c9ad5744ee0865b1ae495bf29d07" style="width: 100.0%; height: 100.0%;">Carrera 27 # 27 - 43 Barrio Teusaquillo BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_9141df7014683fd1084c3b734d89dacf.setContent(html_c253c9ad5744ee0865b1ae495bf29d07);
+        
+
+        marker_02397f23f49af4b5a5b49fcea1ef36d4.bindPopup(popup_9141df7014683fd1084c3b734d89dacf)
+        ;
+
+        
+    
+    
+            var marker_ff5a87ddc7bf21973d6fd226429e8ee9 = L.marker(
+                [4.6202295, -74.0716636],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_032cca9182f2d78fbc0b10d5d8060bf1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_ff5a87ddc7bf21973d6fd226429e8ee9.setIcon(icon_032cca9182f2d78fbc0b10d5d8060bf1);
+        
+    
+        var popup_55f9b20f36cd9f8bb9ca2e351da55b42 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b0e406662528771dfc3fb86c3b32ebd1 = $(`<div id="html_b0e406662528771dfc3fb86c3b32ebd1" style="width: 100.0%; height: 100.0%;">Carrera 16 #31A-36 BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_55f9b20f36cd9f8bb9ca2e351da55b42.setContent(html_b0e406662528771dfc3fb86c3b32ebd1);
+        
+
+        marker_ff5a87ddc7bf21973d6fd226429e8ee9.bindPopup(popup_55f9b20f36cd9f8bb9ca2e351da55b42)
+        ;
+
+        
+    
+    
+            var marker_fc097c718473ec1ab939077a7df2b9d3 = L.marker(
+                [5.565007, -73.3478959],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_d21e14240788840d8a0cded476e4f166 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_fc097c718473ec1ab939077a7df2b9d3.setIcon(icon_d21e14240788840d8a0cded476e4f166);
+        
+    
+        var popup_017a740acebb0628c5d68dba6564fefa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b0a856d767699362014c7a38b3a4a65f = $(`<div id="html_b0a856d767699362014c7a38b3a4a65f" style="width: 100.0%; height: 100.0%;">CL 57 9 36 BRR SANTA RITA BOYACA TUNJA</div>`)[0];
+            popup_017a740acebb0628c5d68dba6564fefa.setContent(html_b0a856d767699362014c7a38b3a4a65f);
+        
+
+        marker_fc097c718473ec1ab939077a7df2b9d3.bindPopup(popup_017a740acebb0628c5d68dba6564fefa)
+        ;
+
+        
+    
+    
+            var marker_ed525487c99e264ded29a06c12014a46 = L.marker(
+                [4.6754294, -74.1178152],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_cede234e7f912945b80351dc17f62af9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_ed525487c99e264ded29a06c12014a46.setIcon(icon_cede234e7f912945b80351dc17f62af9);
+        
+    
+        var popup_63a056cf945a3f2f74c81ffe135dc7da = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3218b8cddde8681bf748a18d013dfbf2 = $(`<div id="html_3218b8cddde8681bf748a18d013dfbf2" style="width: 100.0%; height: 100.0%;">AV CL 26 82 70 BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_63a056cf945a3f2f74c81ffe135dc7da.setContent(html_3218b8cddde8681bf748a18d013dfbf2);
+        
+
+        marker_ed525487c99e264ded29a06c12014a46.bindPopup(popup_63a056cf945a3f2f74c81ffe135dc7da)
+        ;
+
+        
+    
+    
+            var marker_48ce2a8462f59a3450760bae4e09d37c = L.marker(
+                [4.6754294, -74.1178152],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_8dc0e8ddd0d871b159877d89f340aabb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_48ce2a8462f59a3450760bae4e09d37c.setIcon(icon_8dc0e8ddd0d871b159877d89f340aabb);
+        
+    
+        var popup_ffd2c264e695212ee464ed65acb7e225 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6d2ebdb15c8db2d921e41d1dd4e430c5 = $(`<div id="html_6d2ebdb15c8db2d921e41d1dd4e430c5" style="width: 100.0%; height: 100.0%;">AVDA CL 26 No. 82-70 BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_ffd2c264e695212ee464ed65acb7e225.setContent(html_6d2ebdb15c8db2d921e41d1dd4e430c5);
+        
+
+        marker_48ce2a8462f59a3450760bae4e09d37c.bindPopup(popup_ffd2c264e695212ee464ed65acb7e225)
+        ;
+
+        
+    
+    
+            var marker_67fabee883f273fe4c98d22dfb6209e0 = L.marker(
+                [4.6541864, -74.1383506],
+                {}
+            ).addTo(map_c150de9335438465ec93c17a24add8ed);
+        
+    
+            var icon_bd02678e4fc6c7a0061da2ddd53870eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_67fabee883f273fe4c98d22dfb6209e0.setIcon(icon_bd02678e4fc6c7a0061da2ddd53870eb);
+        
+    
+        var popup_45785eccf94066adfbcb18de76f220bd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cca33352a67cee7c10edf27b293f5941 = $(`<div id="html_cca33352a67cee7c10edf27b293f5941" style="width: 100.0%; height: 100.0%;">cr 81f 13 f 11 BOGOTA D.C SANTAFE DE BOGOTA</div>`)[0];
+            popup_45785eccf94066adfbcb18de76f220bd.setContent(html_cca33352a67cee7c10edf27b293f5941);
+        
+
+        marker_67fabee883f273fe4c98d22dfb6209e0.bindPopup(popup_45785eccf94066adfbcb18de76f220bd)
+        ;
+
+        
+    
+    
+            var tile_layer_09ea82994e4239a94e021e785d245135 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_9b75d668c45bbe6d730ba3c2100b8c1d = new L.Control.MiniMap(
+                tile_layer_09ea82994e4239a94e021e785d245135,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_c150de9335438465ec93c17a24add8ed.addControl(mini_map_9b75d668c45bbe6d730ba3c2100b8c1d);
+        
+</script>
+</html>

@@ -1,0 +1,2422 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2915eb05b301c3157c32d27442bf4f32 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    
+                <style>
+                    #float_image_c3b2acfcb8ec468cc5f86af6e2d71dd4 {
+                        position:absolute;
+                        bottom:80%;
+                        left:65%;
+                        }
+                </style>
+            
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_2915eb05b301c3157c32d27442bf4f32" ></div>
+        
+    
+            <img id="float_image_c3b2acfcb8ec468cc5f86af6e2d71dd4" alt="float_image"
+                 src="https://github.com/jorgeiv500/mapas/blob/main/logo-udes-sm.png?raw=true"
+                 style="z-index: 999999">
+            </img>
+            
+</body>
+<script>
+    
+    
+            var map_2915eb05b301c3157c32d27442bf4f32 = L.map(
+                "map_2915eb05b301c3157c32d27442bf4f32",
+                {
+                    center: [7.12539, -73.1198],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3ed927296f0cbf03acc59a3c40f7b115 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+        function geo_json_e16b7035efa87bcb439536d0aa382703_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#001f3f", "fillColor": "#001f3f"};
+            }
+        }
+
+        function geo_json_e16b7035efa87bcb439536d0aa382703_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e16b7035efa87bcb439536d0aa382703 = L.geoJson(null, {
+                onEachFeature: geo_json_e16b7035efa87bcb439536d0aa382703_onEachFeature,
+            
+                style: geo_json_e16b7035efa87bcb439536d0aa382703_styler,
+        });
+
+        function geo_json_e16b7035efa87bcb439536d0aa382703_add (data) {
+            geo_json_e16b7035efa87bcb439536d0aa382703
+                .addData(data)
+                .addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        }
+            geo_json_e16b7035efa87bcb439536d0aa382703_add({"bbox": [-78.990935, -4.298187, -66.876326, 12.437303], "features": [{"bbox": [-78.990935, -4.298187, -66.876326, 12.437303], "geometry": {"coordinates": [[[-75.373223, -0.152032], [-75.801466, 0.084801], [-76.292314, 0.416047], [-76.57638, 0.256936], [-77.424984, 0.395687], [-77.668613, 0.825893], [-77.855061, 0.809925], [-78.855259, 1.380924], [-78.990935, 1.69137], [-78.617831, 1.766404], [-78.662118, 2.267355], [-78.42761, 2.629556], [-77.931543, 2.696606], [-77.510431, 3.325017], [-77.12769, 3.849636], [-77.496272, 4.087606], [-77.307601, 4.667984], [-77.533221, 5.582812], [-77.318815, 5.845354], [-77.476661, 6.691116], [-77.881571, 7.223771], [-77.753414, 7.70984], [-77.431108, 7.638061], [-77.242566, 7.935278], [-77.474723, 8.524286], [-77.353361, 8.670505], [-76.836674, 8.638749], [-76.086384, 9.336821], [-75.6746, 9.443248], [-75.664704, 9.774003], [-75.480426, 10.61899], [-74.906895, 11.083045], [-74.276753, 11.102036], [-74.197223, 11.310473], [-73.414764, 11.227015], [-72.627835, 11.731972], [-72.238195, 11.95555], [-71.75409, 12.437303], [-71.399822, 12.376041], [-71.137461, 12.112982], [-71.331584, 11.776284], [-71.973922, 11.608672], [-72.227575, 11.108702], [-72.614658, 10.821975], [-72.905286, 10.450344], [-73.027604, 9.73677], [-73.304952, 9.152], [-72.78873, 9.085027], [-72.660495, 8.625288], [-72.439862, 8.405275], [-72.360901, 8.002638], [-72.479679, 7.632506], [-72.444487, 7.423785], [-72.198352, 7.340431], [-71.960176, 6.991615], [-70.674234, 7.087785], [-70.093313, 6.960376], [-69.38948, 6.099861], [-68.985319, 6.206805], [-68.265052, 6.153268], [-67.695087, 6.267318], [-67.34144, 6.095468], [-67.521532, 5.55687], [-67.744697, 5.221129], [-67.823012, 4.503937], [-67.621836, 3.839482], [-67.337564, 3.542342], [-67.303173, 3.318454], [-67.809938, 2.820655], [-67.447092, 2.600281], [-67.181294, 2.250638], [-66.876326, 1.253361], [-67.065048, 1.130112], [-67.259998, 1.719999], [-67.53781, 2.037163], [-67.868565, 1.692455], [-69.816973, 1.714805], [-69.804597, 1.089081], [-69.218638, 0.985677], [-69.252434, 0.602651], [-69.452396, 0.706159], [-70.015566, 0.541414], [-70.020656, -0.185156], [-69.577065, -0.549992], [-69.420486, -1.122619], [-69.444102, -1.556287], [-69.893635, -4.298187], [-70.394044, -3.766591], [-70.692682, -3.742872], [-70.047709, -2.725156], [-70.813476, -2.256865], [-71.413646, -2.342802], [-71.774761, -2.16979], [-72.325787, -2.434218], [-73.070392, -2.308954], [-73.659504, -1.260491], [-74.122395, -1.002833], [-74.441601, -0.53082], [-75.106625, -0.057205], [-75.373223, -0.152032]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            var marker_dfe0fd5d3ff79110230560b6b70c9b20 = L.marker(
+                [7.3483695, -73.9029954],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_101718502583d06c01b6335289cfe046 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_dfe0fd5d3ff79110230560b6b70c9b20.setIcon(icon_101718502583d06c01b6335289cfe046);
+        
+    
+        var popup_d6f11797e3d7e437fce660965561d333 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_835f3038e16fa9d7dd0ad9ad154e24bf = $(`<div id="html_835f3038e16fa9d7dd0ad9ad154e24bf" style="width: 100.0%; height: 100.0%;">CALLE 8 # 6-05 </div>`)[0];
+            popup_d6f11797e3d7e437fce660965561d333.setContent(html_835f3038e16fa9d7dd0ad9ad154e24bf);
+        
+
+        marker_dfe0fd5d3ff79110230560b6b70c9b20.bindPopup(popup_d6f11797e3d7e437fce660965561d333)
+        ;
+
+        
+    
+    
+            var marker_d2f23d88a1d2acb15a2234ea2644dc8a = L.marker(
+                [7.1188816, -73.1283712],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_6f364c288053ead02500edf2b03626e4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d2f23d88a1d2acb15a2234ea2644dc8a.setIcon(icon_6f364c288053ead02500edf2b03626e4);
+        
+    
+        var popup_4d76300e82b316c58f869758f5d83a44 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_afc34e0db3f95b11950aae31e6cbbadc = $(`<div id="html_afc34e0db3f95b11950aae31e6cbbadc" style="width: 100.0%; height: 100.0%;">CL 34 13 05 P 2 BRR CENTRO</div>`)[0];
+            popup_4d76300e82b316c58f869758f5d83a44.setContent(html_afc34e0db3f95b11950aae31e6cbbadc);
+        
+
+        marker_d2f23d88a1d2acb15a2234ea2644dc8a.bindPopup(popup_4d76300e82b316c58f869758f5d83a44)
+        ;
+
+        
+    
+    
+            var marker_b36c91e1b0bb186cf6f086db1f47632c = L.marker(
+                [7.0626541, -73.098377],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_cec90884b8905c5385a98cb23db292f2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b36c91e1b0bb186cf6f086db1f47632c.setIcon(icon_cec90884b8905c5385a98cb23db292f2);
+        
+    
+        var popup_22201219928af56bf084740ca10e8df5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c548efbdc7bda4aa796997db35b25091 = $(`<div id="html_c548efbdc7bda4aa796997db35b25091" style="width: 100.0%; height: 100.0%;">calle 197 15-382  cojunto colonial versalles </div>`)[0];
+            popup_22201219928af56bf084740ca10e8df5.setContent(html_c548efbdc7bda4aa796997db35b25091);
+        
+
+        marker_b36c91e1b0bb186cf6f086db1f47632c.bindPopup(popup_22201219928af56bf084740ca10e8df5)
+        ;
+
+        
+    
+    
+            var marker_9dda344b0b3c92a346fa5303e058357d = L.marker(
+                [7.119349, -73.1227416],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_2ecb4578893207781d0d07f9bc38db53 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9dda344b0b3c92a346fa5303e058357d.setIcon(icon_2ecb4578893207781d0d07f9bc38db53);
+        
+    
+        var popup_a10654d0f78eb98b3e8d2573c75932d4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d8f36afc92d3aeb8d8a032a85d43b9b = $(`<div id="html_7d8f36afc92d3aeb8d8a032a85d43b9b" style="width: 100.0%; height: 100.0%;">CALLE 35 No. 33-45 el prado </div>`)[0];
+            popup_a10654d0f78eb98b3e8d2573c75932d4.setContent(html_7d8f36afc92d3aeb8d8a032a85d43b9b);
+        
+
+        marker_9dda344b0b3c92a346fa5303e058357d.bindPopup(popup_a10654d0f78eb98b3e8d2573c75932d4)
+        ;
+
+        
+    
+    
+            var marker_69d71c8f9cf941b9f99f3b64d668e4bd = L.marker(
+                [7.0926089, -73.1243197],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_35f827bd2b408d702255189e40cc68c8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_69d71c8f9cf941b9f99f3b64d668e4bd.setIcon(icon_35f827bd2b408d702255189e40cc68c8);
+        
+    
+        var popup_c70c3c2de977da03d3d1943cd2591a76 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_82fe9e80cb4af5b2f1569e8356764f03 = $(`<div id="html_82fe9e80cb4af5b2f1569e8356764f03" style="width: 100.0%; height: 100.0%;">calle 69 10A 112</div>`)[0];
+            popup_c70c3c2de977da03d3d1943cd2591a76.setContent(html_82fe9e80cb4af5b2f1569e8356764f03);
+        
+
+        marker_69d71c8f9cf941b9f99f3b64d668e4bd.bindPopup(popup_c70c3c2de977da03d3d1943cd2591a76)
+        ;
+
+        
+    
+    
+            var marker_89ff746a08e8eeaba13473ab021960bf = L.marker(
+                [7.1081167, -73.1130849],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_b5e0d902976aade981c96c1c6f40b7ad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_89ff746a08e8eeaba13473ab021960bf.setIcon(icon_b5e0d902976aade981c96c1c6f40b7ad);
+        
+    
+        var popup_f8626a0a7017e7bffa3dd3279d82e2a2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a578bdf062d4738e232589ca73f3cd99 = $(`<div id="html_a578bdf062d4738e232589ca73f3cd99" style="width: 100.0%; height: 100.0%;">CALLE 58 NO. 27-88</div>`)[0];
+            popup_f8626a0a7017e7bffa3dd3279d82e2a2.setContent(html_a578bdf062d4738e232589ca73f3cd99);
+        
+
+        marker_89ff746a08e8eeaba13473ab021960bf.bindPopup(popup_f8626a0a7017e7bffa3dd3279d82e2a2)
+        ;
+
+        
+    
+    
+            var marker_db2b40b2bf3f4ed1874ad5637bd0cd80 = L.marker(
+                [4.6811864, -74.0622556],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_16a445ba4406170b56fc2a826001442d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_db2b40b2bf3f4ed1874ad5637bd0cd80.setIcon(icon_16a445ba4406170b56fc2a826001442d);
+        
+    
+        var popup_634707d214ca4a37bf11c1dc903f1d86 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5deca757ee23eb09c189b9bf7eed7038 = $(`<div id="html_5deca757ee23eb09c189b9bf7eed7038" style="width: 100.0%; height: 100.0%;">CRA. 49 A No. 93 - 16</div>`)[0];
+            popup_634707d214ca4a37bf11c1dc903f1d86.setContent(html_5deca757ee23eb09c189b9bf7eed7038);
+        
+
+        marker_db2b40b2bf3f4ed1874ad5637bd0cd80.bindPopup(popup_634707d214ca4a37bf11c1dc903f1d86)
+        ;
+
+        
+    
+    
+            var marker_a34913e675142c5aaab0efa4212424b5 = L.marker(
+                [7.119349, -73.1227416],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_1a255053cf4879e98b5a29471e512f8a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a34913e675142c5aaab0efa4212424b5.setIcon(icon_1a255053cf4879e98b5a29471e512f8a);
+        
+    
+        var popup_009ad2a4951c12c59788ac260bb1841b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_32b4def417bd1ab2ccade06dfffc53f3 = $(`<div id="html_32b4def417bd1ab2ccade06dfffc53f3" style="width: 100.0%; height: 100.0%;">CALLE 9 NUMERO 20 55</div>`)[0];
+            popup_009ad2a4951c12c59788ac260bb1841b.setContent(html_32b4def417bd1ab2ccade06dfffc53f3);
+        
+
+        marker_a34913e675142c5aaab0efa4212424b5.bindPopup(popup_009ad2a4951c12c59788ac260bb1841b)
+        ;
+
+        
+    
+    
+            var marker_00e4422d5b07ce60af8a187ffde94dca = L.marker(
+                [7.1148938, -73.1281837],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_23ddb33bc1e184b6400f92b3f9ab5e6b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_00e4422d5b07ce60af8a187ffde94dca.setIcon(icon_23ddb33bc1e184b6400f92b3f9ab5e6b);
+        
+    
+        var popup_cacb95c9003dc2206cb3ad2c51044e27 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7accd9d523069373160cfae0679916e5 = $(`<div id="html_7accd9d523069373160cfae0679916e5" style="width: 100.0%; height: 100.0%;">CARRERA 12 No.42-37</div>`)[0];
+            popup_cacb95c9003dc2206cb3ad2c51044e27.setContent(html_7accd9d523069373160cfae0679916e5);
+        
+
+        marker_00e4422d5b07ce60af8a187ffde94dca.bindPopup(popup_cacb95c9003dc2206cb3ad2c51044e27)
+        ;
+
+        
+    
+    
+            var marker_bd883012d0c5eb4333db5a205c02c67a = L.marker(
+                [43.2644714, -2.9434285],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_baa11ea256f45f74bb9ca6e3638e1f63 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_bd883012d0c5eb4333db5a205c02c67a.setIcon(icon_baa11ea256f45f74bb9ca6e3638e1f63);
+        
+    
+        var popup_713fb93baa3c1b48078dace753ad70ea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d1dd66f682b849e30e973dff59d42b9a = $(`<div id="html_d1dd66f682b849e30e973dff59d42b9a" style="width: 100.0%; height: 100.0%;">Gran via 81-5a</div>`)[0];
+            popup_713fb93baa3c1b48078dace753ad70ea.setContent(html_d1dd66f682b849e30e973dff59d42b9a);
+        
+
+        marker_bd883012d0c5eb4333db5a205c02c67a.bindPopup(popup_713fb93baa3c1b48078dace753ad70ea)
+        ;
+
+        
+    
+    
+            var marker_7b9aa1f2c17b493d7193a77a8e2f738a = L.marker(
+                [7.0882981, -73.0759446],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_37a246415b8ccd144f845d75099fec84 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7b9aa1f2c17b493d7193a77a8e2f738a.setIcon(icon_37a246415b8ccd144f845d75099fec84);
+        
+    
+        var popup_bcea752d8922aab5f5ecef40c1fb4583 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_760ecf4c738fd6d3e8f877d1c2052dd9 = $(`<div id="html_760ecf4c738fd6d3e8f877d1c2052dd9" style="width: 100.0%; height: 100.0%;">Calle 10 # 13 -78/80</div>`)[0];
+            popup_bcea752d8922aab5f5ecef40c1fb4583.setContent(html_760ecf4c738fd6d3e8f877d1c2052dd9);
+        
+
+        marker_7b9aa1f2c17b493d7193a77a8e2f738a.bindPopup(popup_bcea752d8922aab5f5ecef40c1fb4583)
+        ;
+
+        
+    
+    
+            var marker_9d4ec934b3ec0a3d1166e0b7f0181961 = L.marker(
+                [7.0868532, -73.1352969],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_e407665cd23e31028309e75967e17a06 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9d4ec934b3ec0a3d1166e0b7f0181961.setIcon(icon_e407665cd23e31028309e75967e17a06);
+        
+    
+        var popup_03256c0055aa899a52d60c7589e399d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ed453ab426b7711c939817dd4dbde78a = $(`<div id="html_ed453ab426b7711c939817dd4dbde78a" style="width: 100.0%; height: 100.0%;">CRA 32W # 71-103 PROVINCIA DE SOTO 1 BODEGA 30</div>`)[0];
+            popup_03256c0055aa899a52d60c7589e399d9.setContent(html_ed453ab426b7711c939817dd4dbde78a);
+        
+
+        marker_9d4ec934b3ec0a3d1166e0b7f0181961.bindPopup(popup_03256c0055aa899a52d60c7589e399d9)
+        ;
+
+        
+    
+    
+            var marker_7bef7d56ad93eb3cbe3fb94954feef88 = L.marker(
+                [7.3919404, -73.49985],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_21641bcbe3ecea0512a5ef44e8813107 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7bef7d56ad93eb3cbe3fb94954feef88.setIcon(icon_21641bcbe3ecea0512a5ef44e8813107);
+        
+    
+        var popup_06555852d32033e50ed33014411bde4b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5f5ffaf1f636213be9ab02c569decbea = $(`<div id="html_5f5ffaf1f636213be9ab02c569decbea" style="width: 100.0%; height: 100.0%;">CL 12 12 35 </div>`)[0];
+            popup_06555852d32033e50ed33014411bde4b.setContent(html_5f5ffaf1f636213be9ab02c569decbea);
+        
+
+        marker_7bef7d56ad93eb3cbe3fb94954feef88.bindPopup(popup_06555852d32033e50ed33014411bde4b)
+        ;
+
+        
+    
+    
+            var marker_2f8c1be9313dfcea558036471087c5d0 = L.marker(
+                [4.6976113, -74.0538683],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_0c94e309e2e7d76fb60ed780e7ebca62 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_2f8c1be9313dfcea558036471087c5d0.setIcon(icon_0c94e309e2e7d76fb60ed780e7ebca62);
+        
+    
+        var popup_c50cba387236e76676b3884bc10ba8e8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_11126d3f94266c683460ebb725dc1b64 = $(`<div id="html_11126d3f94266c683460ebb725dc1b64" style="width: 100.0%; height: 100.0%;">AUTOPISTA NORTE 114-44 PISO 4</div>`)[0];
+            popup_c50cba387236e76676b3884bc10ba8e8.setContent(html_11126d3f94266c683460ebb725dc1b64);
+        
+
+        marker_2f8c1be9313dfcea558036471087c5d0.bindPopup(popup_c50cba387236e76676b3884bc10ba8e8)
+        ;
+
+        
+    
+    
+            var marker_ee0ef8444bf55ae719802c1089b31ede = L.marker(
+                [7.0694605, -73.1071335],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_f1a600e7f2b723eea7b46b84e40bbea1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ee0ef8444bf55ae719802c1089b31ede.setIcon(icon_f1a600e7f2b723eea7b46b84e40bbea1);
+        
+    
+        var popup_14230e88ed0878b916455f4e829f9156 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8ff891572005e02129a665a50af494b8 = $(`<div id="html_8ff891572005e02129a665a50af494b8" style="width: 100.0%; height: 100.0%;">CL 30 24 38 OF 503</div>`)[0];
+            popup_14230e88ed0878b916455f4e829f9156.setContent(html_8ff891572005e02129a665a50af494b8);
+        
+
+        marker_ee0ef8444bf55ae719802c1089b31ede.bindPopup(popup_14230e88ed0878b916455f4e829f9156)
+        ;
+
+        
+    
+    
+            var marker_317f2dd6508fd87dce3864e5e871c7d7 = L.marker(
+                [7.0918123, -73.1097505],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_b62dea45c73159a8179d5e62e6afd88b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_317f2dd6508fd87dce3864e5e871c7d7.setIcon(icon_b62dea45c73159a8179d5e62e6afd88b);
+        
+    
+        var popup_d7fbe10abdc4f4f84ce27a47fd0a312b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d6982c23a5cee4bf1e42d0a7c84e12fb = $(`<div id="html_d6982c23a5cee4bf1e42d0a7c84e12fb" style="width: 100.0%; height: 100.0%;">CL 85 25 118 BRR DIAMANTE II</div>`)[0];
+            popup_d7fbe10abdc4f4f84ce27a47fd0a312b.setContent(html_d6982c23a5cee4bf1e42d0a7c84e12fb);
+        
+
+        marker_317f2dd6508fd87dce3864e5e871c7d7.bindPopup(popup_d7fbe10abdc4f4f84ce27a47fd0a312b)
+        ;
+
+        
+    
+    
+            var marker_79e794a11c46d6ce53359f65495e8ec4 = L.marker(
+                [7.1144361, -73.1082483],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_ee50f309899037ae616b76402ed390f0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_79e794a11c46d6ce53359f65495e8ec4.setIcon(icon_ee50f309899037ae616b76402ed390f0);
+        
+    
+        var popup_62a25413a5377fb983012a23a86b3b0b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ca864977b0fdb085db9d85a264851931 = $(`<div id="html_ca864977b0fdb085db9d85a264851931" style="width: 100.0%; height: 100.0%;">CRA 36 N. 51-53 2DO PISO</div>`)[0];
+            popup_62a25413a5377fb983012a23a86b3b0b.setContent(html_ca864977b0fdb085db9d85a264851931);
+        
+
+        marker_79e794a11c46d6ce53359f65495e8ec4.bindPopup(popup_62a25413a5377fb983012a23a86b3b0b)
+        ;
+
+        
+    
+    
+            var marker_68d1e0533742152e52bdf26168f62c34 = L.marker(
+                [7.0811958, -73.1481874],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_33f10b4c0e02ad882b4739302cc0af68 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_68d1e0533742152e52bdf26168f62c34.setIcon(icon_33f10b4c0e02ad882b4739302cc0af68);
+        
+    
+        var popup_5aba31dc72dea9f4a3e6b8a047be2449 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_361c0ef8501c3f110034f6227b762476 = $(`<div id="html_361c0ef8501c3f110034f6227b762476" style="width: 100.0%; height: 100.0%;">CLL 72 # 36W-50 VIA PROVINCIA DE SOTO 2</div>`)[0];
+            popup_5aba31dc72dea9f4a3e6b8a047be2449.setContent(html_361c0ef8501c3f110034f6227b762476);
+        
+
+        marker_68d1e0533742152e52bdf26168f62c34.bindPopup(popup_5aba31dc72dea9f4a3e6b8a047be2449)
+        ;
+
+        
+    
+    
+            var marker_41437794690033b682b2f262f09cd5fe = L.marker(
+                [7.0882981, -73.0759446],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_88a6ae0676fed3a73f6853d982be9a5f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_41437794690033b682b2f262f09cd5fe.setIcon(icon_88a6ae0676fed3a73f6853d982be9a5f);
+        
+    
+        var popup_f55e656555744ca495b135f44ec67ded = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2222c953514514afd99c5149ad2433c0 = $(`<div id="html_2222c953514514afd99c5149ad2433c0" style="width: 100.0%; height: 100.0%;">CL 5 CRA 4 INT II ANTIGUA LICORERA DE SANTANDER </div>`)[0];
+            popup_f55e656555744ca495b135f44ec67ded.setContent(html_2222c953514514afd99c5149ad2433c0);
+        
+
+        marker_41437794690033b682b2f262f09cd5fe.bindPopup(popup_f55e656555744ca495b135f44ec67ded)
+        ;
+
+        
+    
+    
+            var marker_98d991a82ea98f4cc02b322485566cd8 = L.marker(
+                [4.6592159, -74.0644857],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_f0e079b8cd2b09307750d6b3178bc8e2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_98d991a82ea98f4cc02b322485566cd8.setIcon(icon_f0e079b8cd2b09307750d6b3178bc8e2);
+        
+    
+        var popup_147f099572d0d712dbc36c759613eb78 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bc46052807e4116d101a8915ec3ee15d = $(`<div id="html_bc46052807e4116d101a8915ec3ee15d" style="width: 100.0%; height: 100.0%;">CALLE71#17-45</div>`)[0];
+            popup_147f099572d0d712dbc36c759613eb78.setContent(html_bc46052807e4116d101a8915ec3ee15d);
+        
+
+        marker_98d991a82ea98f4cc02b322485566cd8.bindPopup(popup_147f099572d0d712dbc36c759613eb78)
+        ;
+
+        
+    
+    
+            var marker_c92409639ff448cbb9b6e9180cca17ac = L.marker(
+                [4.6956086, -74.031564],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_6fd25c3d4b319b5dad63b0facfed7945 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c92409639ff448cbb9b6e9180cca17ac.setIcon(icon_6fd25c3d4b319b5dad63b0facfed7945);
+        
+    
+        var popup_f3ed3ecd877d9b721c5f4335861dd2fd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_53551d3e7265ed827459b1b3b4ef3e4a = $(`<div id="html_53551d3e7265ed827459b1b3b4ef3e4a" style="width: 100.0%; height: 100.0%;">CALLE 119 N°6A-47 INT 2</div>`)[0];
+            popup_f3ed3ecd877d9b721c5f4335861dd2fd.setContent(html_53551d3e7265ed827459b1b3b4ef3e4a);
+        
+
+        marker_c92409639ff448cbb9b6e9180cca17ac.bindPopup(popup_f3ed3ecd877d9b721c5f4335861dd2fd)
+        ;
+
+        
+    
+    
+            var marker_ef99b2bf88777ea46982233e16238457 = L.marker(
+                [7.1159283, -73.1268813],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_6dd7274703d94961a02760b49dd11747 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ef99b2bf88777ea46982233e16238457.setIcon(icon_6dd7274703d94961a02760b49dd11747);
+        
+    
+        var popup_6e3e96404a686058ec820074805181d0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_efef2f2a7baeed005b7f159beb6dff98 = $(`<div id="html_efef2f2a7baeed005b7f159beb6dff98" style="width: 100.0%; height: 100.0%;">Cra 14 # 41-20 </div>`)[0];
+            popup_6e3e96404a686058ec820074805181d0.setContent(html_efef2f2a7baeed005b7f159beb6dff98);
+        
+
+        marker_ef99b2bf88777ea46982233e16238457.bindPopup(popup_6e3e96404a686058ec820074805181d0)
+        ;
+
+        
+    
+    
+            var marker_317e7607d5f90c0fe6e3edd056452cfb = L.marker(
+                [3.4228101, -76.5499018],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_fae4208083683521ed1f20695832be44 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_317e7607d5f90c0fe6e3edd056452cfb.setIcon(icon_fae4208083683521ed1f20695832be44);
+        
+    
+        var popup_93b4336a441f009918805d7a4c503201 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6c1bf64d1b32972e95786c70da501204 = $(`<div id="html_6c1bf64d1b32972e95786c70da501204" style="width: 100.0%; height: 100.0%;">CRA 42 No 3 -46</div>`)[0];
+            popup_93b4336a441f009918805d7a4c503201.setContent(html_6c1bf64d1b32972e95786c70da501204);
+        
+
+        marker_317e7607d5f90c0fe6e3edd056452cfb.bindPopup(popup_93b4336a441f009918805d7a4c503201)
+        ;
+
+        
+    
+    
+            var marker_bd020bc36be09b2310e2c2aa43aa8f06 = L.marker(
+                [7.1081283, -73.1134072],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_31b852a8465bb3d6da38592d7cdc5490 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_bd020bc36be09b2310e2c2aa43aa8f06.setIcon(icon_31b852a8465bb3d6da38592d7cdc5490);
+        
+    
+        var popup_f6accc38f776a0fbf2c928597274499c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ebadfe30740874452f4e43a03813d158 = $(`<div id="html_ebadfe30740874452f4e43a03813d158" style="width: 100.0%; height: 100.0%;">CALLE 58 27 82</div>`)[0];
+            popup_f6accc38f776a0fbf2c928597274499c.setContent(html_ebadfe30740874452f4e43a03813d158);
+        
+
+        marker_bd020bc36be09b2310e2c2aa43aa8f06.bindPopup(popup_f6accc38f776a0fbf2c928597274499c)
+        ;
+
+        
+    
+    
+            var marker_31f6bd8a6c4f9c1c6f130d04bfda081d = L.marker(
+                [7.0586588, -73.8668652],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_7672da91ad2d8ebdb2c757170414cbff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_31f6bd8a6c4f9c1c6f130d04bfda081d.setIcon(icon_7672da91ad2d8ebdb2c757170414cbff);
+        
+    
+        var popup_b808cd590e83a992a3f718ed3b0478a8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c13e0d59281953dadbe04dd795f9c424 = $(`<div id="html_c13e0d59281953dadbe04dd795f9c424" style="width: 100.0%; height: 100.0%;">CALLE 49 N 10 86</div>`)[0];
+            popup_b808cd590e83a992a3f718ed3b0478a8.setContent(html_c13e0d59281953dadbe04dd795f9c424);
+        
+
+        marker_31f6bd8a6c4f9c1c6f130d04bfda081d.bindPopup(popup_b808cd590e83a992a3f718ed3b0478a8)
+        ;
+
+        
+    
+    
+            var marker_9ef3062c92b53711d37b40612b973f79 = L.marker(
+                [7.1159572, -73.1246382],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_7ae2d3bd5c0d335cbfc4b99896a4517a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9ef3062c92b53711d37b40612b973f79.setIcon(icon_7ae2d3bd5c0d335cbfc4b99896a4517a);
+        
+    
+        var popup_a5e4038b6c404e77cbaa5a52b46acc73 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aa764757f1993f5021d5e095d3dac5db = $(`<div id="html_aa764757f1993f5021d5e095d3dac5db" style="width: 100.0%; height: 100.0%;">CR 16 # 41-57</div>`)[0];
+            popup_a5e4038b6c404e77cbaa5a52b46acc73.setContent(html_aa764757f1993f5021d5e095d3dac5db);
+        
+
+        marker_9ef3062c92b53711d37b40612b973f79.bindPopup(popup_a5e4038b6c404e77cbaa5a52b46acc73)
+        ;
+
+        
+    
+    
+            var marker_b92f8108bd32143e3c22a4d575d7d8b1 = L.marker(
+                [6.991539, -73.053998],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_313837f3092ddb9f5c9837b80ddb54ea = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b92f8108bd32143e3c22a4d575d7d8b1.setIcon(icon_313837f3092ddb9f5c9837b80ddb54ea);
+        
+    
+        var popup_df3aa0766febce4f26cc8b1850af62b7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_efa6011bb610f49a957f7b4dccf3a286 = $(`<div id="html_efa6011bb610f49a957f7b4dccf3a286" style="width: 100.0%; height: 100.0%;">CLL 8 9 38</div>`)[0];
+            popup_df3aa0766febce4f26cc8b1850af62b7.setContent(html_efa6011bb610f49a957f7b4dccf3a286);
+        
+
+        marker_b92f8108bd32143e3c22a4d575d7d8b1.bindPopup(popup_df3aa0766febce4f26cc8b1850af62b7)
+        ;
+
+        
+    
+    
+            var marker_7500fb32bcb1f072a4285395e3660240 = L.marker(
+                [7.0839261, -73.1150443],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_4c955c9449acda715a899b1cbad03ede = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7500fb32bcb1f072a4285395e3660240.setIcon(icon_4c955c9449acda715a899b1cbad03ede);
+        
+    
+        var popup_7885ed6c10879008d9b3c140b7cc5cf1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8e932c77c91d58b4363b9a0514ad61ee = $(`<div id="html_8e932c77c91d58b4363b9a0514ad61ee" style="width: 100.0%; height: 100.0%;">CR 22 B   113 10 AP 202  EDIF  TOULUM BARRIO  PROVENZA</div>`)[0];
+            popup_7885ed6c10879008d9b3c140b7cc5cf1.setContent(html_8e932c77c91d58b4363b9a0514ad61ee);
+        
+
+        marker_7500fb32bcb1f072a4285395e3660240.bindPopup(popup_7885ed6c10879008d9b3c140b7cc5cf1)
+        ;
+
+        
+    
+    
+            var marker_559c51c05fe51a4947d6102079e781b5 = L.marker(
+                [6.547306, -71.0022311],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_d0a0eb2ce2332c8e25c1dd3285efc688 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_559c51c05fe51a4947d6102079e781b5.setIcon(icon_d0a0eb2ce2332c8e25c1dd3285efc688);
+        
+    
+        var popup_8b367b8053e287edc51810cca08f8f14 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a2dbf75d180626f027fe2962e055199c = $(`<div id="html_a2dbf75d180626f027fe2962e055199c" style="width: 100.0%; height: 100.0%;">CR 21 15 28 SANTA TERESITA</div>`)[0];
+            popup_8b367b8053e287edc51810cca08f8f14.setContent(html_a2dbf75d180626f027fe2962e055199c);
+        
+
+        marker_559c51c05fe51a4947d6102079e781b5.bindPopup(popup_8b367b8053e287edc51810cca08f8f14)
+        ;
+
+        
+    
+    
+            var marker_7f84fbc12ea16ab4eb04778790990091 = L.marker(
+                [7.0808979, -73.1032413],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_08eef61a714c82d0c1cc7fa5e103c4e8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7f84fbc12ea16ab4eb04778790990091.setIcon(icon_08eef61a714c82d0c1cc7fa5e103c4e8);
+        
+    
+        var popup_cb3e34c012e2f5e7ad0a9dceec2c7e23 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eed13ac168b7137d42a9b7f72206b94b = $(`<div id="html_eed13ac168b7137d42a9b7f72206b94b" style="width: 100.0%; height: 100.0%;">CALLE 10 No 13 - 78/80 BARRIO VILLABEL</div>`)[0];
+            popup_cb3e34c012e2f5e7ad0a9dceec2c7e23.setContent(html_eed13ac168b7137d42a9b7f72206b94b);
+        
+
+        marker_7f84fbc12ea16ab4eb04778790990091.bindPopup(popup_cb3e34c012e2f5e7ad0a9dceec2c7e23)
+        ;
+
+        
+    
+    
+            var marker_77782f6bdb15efcd1d6b1e25ec98b582 = L.marker(
+                [4.6835041, -74.0665913],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_c9e47bd747b240b609f4750c29715e1f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_77782f6bdb15efcd1d6b1e25ec98b582.setIcon(icon_c9e47bd747b240b609f4750c29715e1f);
+        
+    
+        var popup_38569592bb6f2b5aeb843f57f914618e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ea15e2c0315d012133db8aca0956cdb = $(`<div id="html_6ea15e2c0315d012133db8aca0956cdb" style="width: 100.0%; height: 100.0%;">CALLE 94A 60 44</div>`)[0];
+            popup_38569592bb6f2b5aeb843f57f914618e.setContent(html_6ea15e2c0315d012133db8aca0956cdb);
+        
+
+        marker_77782f6bdb15efcd1d6b1e25ec98b582.bindPopup(popup_38569592bb6f2b5aeb843f57f914618e)
+        ;
+
+        
+    
+    
+            var marker_eaba74ac153bcc6f47c1728c80431e91 = L.marker(
+                [7.119349, -73.1227416],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_0f7775e27cb25b6bf8edb0dbde040cab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_eaba74ac153bcc6f47c1728c80431e91.setIcon(icon_0f7775e27cb25b6bf8edb0dbde040cab);
+        
+    
+        var popup_346989493b69dfb8d5c5d6acd903f3b0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_29274fa0261d6a06822b421dff797472 = $(`<div id="html_29274fa0261d6a06822b421dff797472" style="width: 100.0%; height: 100.0%;">CARRERA 31 N. 51 74 OFC 504</div>`)[0];
+            popup_346989493b69dfb8d5c5d6acd903f3b0.setContent(html_29274fa0261d6a06822b421dff797472);
+        
+
+        marker_eaba74ac153bcc6f47c1728c80431e91.bindPopup(popup_346989493b69dfb8d5c5d6acd903f3b0)
+        ;
+
+        
+    
+    
+            var marker_653c23fd6342c780995abb6ad000a042 = L.marker(
+                [7.1124853, -73.1129927],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_d6687a094a46cac1cb5b66567c9b594e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_653c23fd6342c780995abb6ad000a042.setIcon(icon_d6687a094a46cac1cb5b66567c9b594e);
+        
+    
+        var popup_e0a70709f6238016716efe75f3e47c82 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_743b1254d5fed6ad8ebd79df2a00c092 = $(`<div id="html_743b1254d5fed6ad8ebd79df2a00c092" style="width: 100.0%; height: 100.0%;">CALLE 52 #30-16</div>`)[0];
+            popup_e0a70709f6238016716efe75f3e47c82.setContent(html_743b1254d5fed6ad8ebd79df2a00c092);
+        
+
+        marker_653c23fd6342c780995abb6ad000a042.bindPopup(popup_e0a70709f6238016716efe75f3e47c82)
+        ;
+
+        
+    
+    
+            var marker_dccfe3eb6d91103b2d68a55bccd62bdd = L.marker(
+                [7.1186928, -73.1279993],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_31c432c0bc571b10d2d9ceff706df1c1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_dccfe3eb6d91103b2d68a55bccd62bdd.setIcon(icon_31c432c0bc571b10d2d9ceff706df1c1);
+        
+    
+        var popup_cb6a97a0d52a52f454046e82a67c53e9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_46c64cb15ae960c1a96bbf2f565a7d8b = $(`<div id="html_46c64cb15ae960c1a96bbf2f565a7d8b" style="width: 100.0%; height: 100.0%;">CLL 34 #13 -42</div>`)[0];
+            popup_cb6a97a0d52a52f454046e82a67c53e9.setContent(html_46c64cb15ae960c1a96bbf2f565a7d8b);
+        
+
+        marker_dccfe3eb6d91103b2d68a55bccd62bdd.bindPopup(popup_cb6a97a0d52a52f454046e82a67c53e9)
+        ;
+
+        
+    
+    
+            var marker_49541cbdfb4eb90f62e477b57e14f408 = L.marker(
+                [7.1331515, -73.1231816],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_163744fcbfe2c544f96cd418a7d35ba3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_49541cbdfb4eb90f62e477b57e14f408.setIcon(icon_163744fcbfe2c544f96cd418a7d35ba3);
+        
+    
+        var popup_4d901288eedde82a9aa8ace89b33d296 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_949ee4507e522dcfa17ba4ef0a1db31d = $(`<div id="html_949ee4507e522dcfa17ba4ef0a1db31d" style="width: 100.0%; height: 100.0%;">CALLE 15 No. 23-46</div>`)[0];
+            popup_4d901288eedde82a9aa8ace89b33d296.setContent(html_949ee4507e522dcfa17ba4ef0a1db31d);
+        
+
+        marker_49541cbdfb4eb90f62e477b57e14f408.bindPopup(popup_4d901288eedde82a9aa8ace89b33d296)
+        ;
+
+        
+    
+    
+            var marker_2b3f6121acd7f17a0aed77514b703e9c = L.marker(
+                [7.8890971, -72.4966896],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_3cc0e7ed8940cfb8fc0022053fbe529d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_2b3f6121acd7f17a0aed77514b703e9c.setIcon(icon_3cc0e7ed8940cfb8fc0022053fbe529d);
+        
+    
+        var popup_43d700f97168b62f147e528b9a98ba27 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a4b1f3b19140677a0af31505fad8b1e8 = $(`<div id="html_a4b1f3b19140677a0af31505fad8b1e8" style="width: 100.0%; height: 100.0%;">Calle 33 N. 11-83</div>`)[0];
+            popup_43d700f97168b62f147e528b9a98ba27.setContent(html_a4b1f3b19140677a0af31505fad8b1e8);
+        
+
+        marker_2b3f6121acd7f17a0aed77514b703e9c.bindPopup(popup_43d700f97168b62f147e528b9a98ba27)
+        ;
+
+        
+    
+    
+            var marker_790daca2e5dc5132cbf27bed12b72ea4 = L.marker(
+                [7.1334471, -73.1298215],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_1c5872089c6fc02028d2a661f74adab2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_790daca2e5dc5132cbf27bed12b72ea4.setIcon(icon_1c5872089c6fc02028d2a661f74adab2);
+        
+    
+        var popup_b0b3bd98fd1fc0ed38c906e9f84c625e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0c2d6a0e5807a36182a3f840360318f5 = $(`<div id="html_0c2d6a0e5807a36182a3f840360318f5" style="width: 100.0%; height: 100.0%;">Carrera 16 #13-30. oficina 502</div>`)[0];
+            popup_b0b3bd98fd1fc0ed38c906e9f84c625e.setContent(html_0c2d6a0e5807a36182a3f840360318f5);
+        
+
+        marker_790daca2e5dc5132cbf27bed12b72ea4.bindPopup(popup_b0b3bd98fd1fc0ed38c906e9f84c625e)
+        ;
+
+        
+    
+    
+            var marker_113e11b3532af598c1d3830c7834a8e6 = L.marker(
+                [7.1301046, -73.1283851],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_8d571c3b6bec41857bf149959213eb7b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_113e11b3532af598c1d3830c7834a8e6.setIcon(icon_8d571c3b6bec41857bf149959213eb7b);
+        
+    
+        var popup_004a601592f8376f996f95846ab9ebea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2d54a34f573849749a4f65068a3160c2 = $(`<div id="html_2d54a34f573849749a4f65068a3160c2" style="width: 100.0%; height: 100.0%;">CRA 17 17 44</div>`)[0];
+            popup_004a601592f8376f996f95846ab9ebea.setContent(html_2d54a34f573849749a4f65068a3160c2);
+        
+
+        marker_113e11b3532af598c1d3830c7834a8e6.bindPopup(popup_004a601592f8376f996f95846ab9ebea)
+        ;
+
+        
+    
+    
+            var marker_e4db068198b32db250704b771fbba27d = L.marker(
+                [7.0895, -73.1122291],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_3646cfb1e3a25275e994eae724bcee38 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e4db068198b32db250704b771fbba27d.setIcon(icon_3646cfb1e3a25275e994eae724bcee38);
+        
+    
+        var popup_3c145f104f2eb02745f9f1db5d289238 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a3095df120cb2b69d3ab6fc74b6141a = $(`<div id="html_7a3095df120cb2b69d3ab6fc74b6141a" style="width: 100.0%; height: 100.0%;">CLL 91 24 117 DIAMANTE II</div>`)[0];
+            popup_3c145f104f2eb02745f9f1db5d289238.setContent(html_7a3095df120cb2b69d3ab6fc74b6141a);
+        
+
+        marker_e4db068198b32db250704b771fbba27d.bindPopup(popup_3c145f104f2eb02745f9f1db5d289238)
+        ;
+
+        
+    
+    
+            var marker_b1d3acb6be979fcc3f3bba20fa284d60 = L.marker(
+                [7.0907077, -73.1107797],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_93c8e2c2a41796319dd48970dd544859 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b1d3acb6be979fcc3f3bba20fa284d60.setIcon(icon_93c8e2c2a41796319dd48970dd544859);
+        
+    
+        var popup_770f99d57f2be912cc1c42a7513ce694 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dd34abcba55da629398237ffab99a7ff = $(`<div id="html_dd34abcba55da629398237ffab99a7ff" style="width: 100.0%; height: 100.0%;">CLL 88 25 51 DIAMANTE 2</div>`)[0];
+            popup_770f99d57f2be912cc1c42a7513ce694.setContent(html_dd34abcba55da629398237ffab99a7ff);
+        
+
+        marker_b1d3acb6be979fcc3f3bba20fa284d60.bindPopup(popup_770f99d57f2be912cc1c42a7513ce694)
+        ;
+
+        
+    
+    
+            var marker_f060f12098b5494d7370e37f158af14b = L.marker(
+                [7.1144307, -73.1084251],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_16fc2b69f7b6a7631762ea2929eebb6f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f060f12098b5494d7370e37f158af14b.setIcon(icon_16fc2b69f7b6a7631762ea2929eebb6f);
+        
+    
+        var popup_c104050df1e86bc2beabe35e3547f9d8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2cd77f75960beeacef6af6be4d09173e = $(`<div id="html_2cd77f75960beeacef6af6be4d09173e" style="width: 100.0%; height: 100.0%;">CRA 36 # 51-52 LOCAL 1 EDIFICIO ATENEA PLAZA CABECERA</div>`)[0];
+            popup_c104050df1e86bc2beabe35e3547f9d8.setContent(html_2cd77f75960beeacef6af6be4d09173e);
+        
+
+        marker_f060f12098b5494d7370e37f158af14b.bindPopup(popup_c104050df1e86bc2beabe35e3547f9d8)
+        ;
+
+        
+    
+    
+            var marker_d03f0acbc7ac3afbb650d2cd49e87ed9 = L.marker(
+                [4.6800728, -74.0622014],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_14b2edb6449f1477ea5b2ce66a1b3294 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d03f0acbc7ac3afbb650d2cd49e87ed9.setIcon(icon_14b2edb6449f1477ea5b2ce66a1b3294);
+        
+    
+        var popup_d4ef112228364efc58cb5626bf67da45 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_91b2804ce324ade157c03418fd9d88c0 = $(`<div id="html_91b2804ce324ade157c03418fd9d88c0" style="width: 100.0%; height: 100.0%;">CARRERA 49 No. 91- 63</div>`)[0];
+            popup_d4ef112228364efc58cb5626bf67da45.setContent(html_91b2804ce324ade157c03418fd9d88c0);
+        
+
+        marker_d03f0acbc7ac3afbb650d2cd49e87ed9.bindPopup(popup_d4ef112228364efc58cb5626bf67da45)
+        ;
+
+        
+    
+    
+            var marker_0dbebbf2f17daeeb979518c274ac203a = L.marker(
+                [7.1168211, -73.1224941],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_09f70a5d03362e38b1b564985e34ea52 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_0dbebbf2f17daeeb979518c274ac203a.setIcon(icon_09f70a5d03362e38b1b564985e34ea52);
+        
+    
+        var popup_7c31fce7feaa76de5a8ce0847dde1699 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_66ea19c3259141d2f8f737860eb55ef7 = $(`<div id="html_66ea19c3259141d2f8f737860eb55ef7" style="width: 100.0%; height: 100.0%;">CALLE 41 18 77</div>`)[0];
+            popup_7c31fce7feaa76de5a8ce0847dde1699.setContent(html_66ea19c3259141d2f8f737860eb55ef7);
+        
+
+        marker_0dbebbf2f17daeeb979518c274ac203a.bindPopup(popup_7c31fce7feaa76de5a8ce0847dde1699)
+        ;
+
+        
+    
+    
+            var marker_140343121f252493de6f5a83b9497bad = L.marker(
+                [7.119349, -73.1227416],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_0877bf8cd65ce0b94748ac4873bb52c7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_140343121f252493de6f5a83b9497bad.setIcon(icon_0877bf8cd65ce0b94748ac4873bb52c7);
+        
+    
+        var popup_f1e70a8632502e5f593e3071fd9a675e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_859a46f104cf5f763ec61de6910e9cda = $(`<div id="html_859a46f104cf5f763ec61de6910e9cda" style="width: 100.0%; height: 100.0%;">CLL 20 N° 16-39 SAN FRANCISCO </div>`)[0];
+            popup_f1e70a8632502e5f593e3071fd9a675e.setContent(html_859a46f104cf5f763ec61de6910e9cda);
+        
+
+        marker_140343121f252493de6f5a83b9497bad.bindPopup(popup_f1e70a8632502e5f593e3071fd9a675e)
+        ;
+
+        
+    
+    
+            var marker_6e227b962ef096675b233b5f67171ec1 = L.marker(
+                [7.1196439, -73.1241661],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_79ab2a0804f03a80c8a4c06366c7bb0d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6e227b962ef096675b233b5f67171ec1.setIcon(icon_79ab2a0804f03a80c8a4c06366c7bb0d);
+        
+    
+        var popup_9f8794a8a8f36de2bb549b2bdba1d63e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cf6c5d4fec1ed05cc3e712588714b815 = $(`<div id="html_cf6c5d4fec1ed05cc3e712588714b815" style="width: 100.0%; height: 100.0%;">CL 35 18 21  PISO 10 EDIF SURABIC</div>`)[0];
+            popup_9f8794a8a8f36de2bb549b2bdba1d63e.setContent(html_cf6c5d4fec1ed05cc3e712588714b815);
+        
+
+        marker_6e227b962ef096675b233b5f67171ec1.bindPopup(popup_9f8794a8a8f36de2bb549b2bdba1d63e)
+        ;
+
+        
+    
+    
+            var marker_363b1c8ff0554d7015412ad582488d53 = L.marker(
+                [7.1171058, -73.1273602],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_30d1f6676f3e46b99b50a03d93615d51 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_363b1c8ff0554d7015412ad582488d53.setIcon(icon_30d1f6676f3e46b99b50a03d93615d51);
+        
+    
+        var popup_54e0699ac2b45f798b3752268e1fbd18 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f5d59836543ea6a50124e8ebf7af57da = $(`<div id="html_f5d59836543ea6a50124e8ebf7af57da" style="width: 100.0%; height: 100.0%;">CALLE 4 N 13 37</div>`)[0];
+            popup_54e0699ac2b45f798b3752268e1fbd18.setContent(html_f5d59836543ea6a50124e8ebf7af57da);
+        
+
+        marker_363b1c8ff0554d7015412ad582488d53.bindPopup(popup_54e0699ac2b45f798b3752268e1fbd18)
+        ;
+
+        
+    
+    
+            var marker_b70fc375058444bc11cfa81bae919ba8 = L.marker(
+                [7.1191898, -73.1174277],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_ef2de7dba743cdfa0502c2c73c936766 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b70fc375058444bc11cfa81bae919ba8.setIcon(icon_ef2de7dba743cdfa0502c2c73c936766);
+        
+    
+        var popup_dd704bb900ea61d8ee764d089b0b6a2c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3d87597b00fc43e4059e70b3d2436d46 = $(`<div id="html_3d87597b00fc43e4059e70b3d2436d46" style="width: 100.0%; height: 100.0%;">Carrera 25 # 320 apto 101 Barrio Bolivar</div>`)[0];
+            popup_dd704bb900ea61d8ee764d089b0b6a2c.setContent(html_3d87597b00fc43e4059e70b3d2436d46);
+        
+
+        marker_b70fc375058444bc11cfa81bae919ba8.bindPopup(popup_dd704bb900ea61d8ee764d089b0b6a2c)
+        ;
+
+        
+    
+    
+            var marker_c29c686cc3c393d764e4e83a724873a7 = L.marker(
+                [7.1241709, -73.1174226],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_f1dc685dcb83329e8dcb8e2e8a48f92a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c29c686cc3c393d764e4e83a724873a7.setIcon(icon_f1dc685dcb83329e8dcb8e2e8a48f92a);
+        
+    
+        var popup_fd24412e20f196a7dc6c6df75c76376f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bd4ea7c28b8a464309a276ad89ad99c2 = $(`<div id="html_bd4ea7c28b8a464309a276ad89ad99c2" style="width: 100.0%; height: 100.0%;">CALLE 33 N 27 11</div>`)[0];
+            popup_fd24412e20f196a7dc6c6df75c76376f.setContent(html_bd4ea7c28b8a464309a276ad89ad99c2);
+        
+
+        marker_c29c686cc3c393d764e4e83a724873a7.bindPopup(popup_fd24412e20f196a7dc6c6df75c76376f)
+        ;
+
+        
+    
+    
+            var marker_f249c065bbe1f9ee62ab111af760d9b2 = L.marker(
+                [7.1143073, -73.1220136],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_4b949922e92c4ba4b09df7ece988b9a7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f249c065bbe1f9ee62ab111af760d9b2.setIcon(icon_4b949922e92c4ba4b09df7ece988b9a7);
+        
+    
+        var popup_7455ee9f8a65660b7a520c188bd63178 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_78428f2fc04c0b534e17aeebacee5452 = $(`<div id="html_78428f2fc04c0b534e17aeebacee5452" style="width: 100.0%; height: 100.0%;">CARRERA 17 45 163</div>`)[0];
+            popup_7455ee9f8a65660b7a520c188bd63178.setContent(html_78428f2fc04c0b534e17aeebacee5452);
+        
+
+        marker_f249c065bbe1f9ee62ab111af760d9b2.bindPopup(popup_7455ee9f8a65660b7a520c188bd63178)
+        ;
+
+        
+    
+    
+            var marker_af11ea48dc8a49d12151940385eb86b6 = L.marker(
+                [12.5806128, -81.6938453],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_43a02ebf1ea94c34d10bb91248ed9ffe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_af11ea48dc8a49d12151940385eb86b6.setIcon(icon_43a02ebf1ea94c34d10bb91248ed9ffe);
+        
+    
+        var popup_59f7c7c97aa2904b95cca138cb41759e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8c1553e542d601efdfc98bdbf80343c9 = $(`<div id="html_8c1553e542d601efdfc98bdbf80343c9" style="width: 100.0%; height: 100.0%;">AV NEWBALL 4 - 169</div>`)[0];
+            popup_59f7c7c97aa2904b95cca138cb41759e.setContent(html_8c1553e542d601efdfc98bdbf80343c9);
+        
+
+        marker_af11ea48dc8a49d12151940385eb86b6.bindPopup(popup_59f7c7c97aa2904b95cca138cb41759e)
+        ;
+
+        
+    
+    
+            var marker_2436cd554ab89f4caa066030b3c20f73 = L.marker(
+                [7.0875661, -73.1128505],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_4d4e5ab7f2211d44d40542f0afd6f614 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_2436cd554ab89f4caa066030b3c20f73.setIcon(icon_4d4e5ab7f2211d44d40542f0afd6f614);
+        
+    
+        var popup_91ea9e86442adec655ca61d7365fc4f2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4682f39b844b437be37b58fc26fbf9fb = $(`<div id="html_4682f39b844b437be37b58fc26fbf9fb" style="width: 100.0%; height: 100.0%;">Calle 101 #23A-19</div>`)[0];
+            popup_91ea9e86442adec655ca61d7365fc4f2.setContent(html_4682f39b844b437be37b58fc26fbf9fb);
+        
+
+        marker_2436cd554ab89f4caa066030b3c20f73.bindPopup(popup_91ea9e86442adec655ca61d7365fc4f2)
+        ;
+
+        
+    
+    
+            var marker_a81327b8cd3688708e0e69b5b942bb27 = L.marker(
+                [7.1165113, -73.1246159],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_2f28b7500230cc82a67bb1d72d30ebf6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a81327b8cd3688708e0e69b5b942bb27.setIcon(icon_2f28b7500230cc82a67bb1d72d30ebf6);
+        
+    
+        var popup_80b9e789bc52ddccc0f75d419ddafd6e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7b4a6cc0c8426a4189e2bf85610034cb = $(`<div id="html_7b4a6cc0c8426a4189e2bf85610034cb" style="width: 100.0%; height: 100.0%;">CALLE 41 16 29</div>`)[0];
+            popup_80b9e789bc52ddccc0f75d419ddafd6e.setContent(html_7b4a6cc0c8426a4189e2bf85610034cb);
+        
+
+        marker_a81327b8cd3688708e0e69b5b942bb27.bindPopup(popup_80b9e789bc52ddccc0f75d419ddafd6e)
+        ;
+
+        
+    
+    
+            var marker_1c2559bd312df7815076abdf7fba27e6 = L.marker(
+                [7.0882981, -73.0759446],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_b0117f87ff19221030407668e0114d48 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1c2559bd312df7815076abdf7fba27e6.setIcon(icon_b0117f87ff19221030407668e0114d48);
+        
+    
+        var popup_1c6caedce2d93bd82ead6a925f58f213 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_063d209a173754955e0ecd5635ab772b = $(`<div id="html_063d209a173754955e0ecd5635ab772b" style="width: 100.0%; height: 100.0%;">CALLE 6 N° 11 - 53 FLORIDABLANCA, CASCO ANTIGUO, Piso 1</div>`)[0];
+            popup_1c6caedce2d93bd82ead6a925f58f213.setContent(html_063d209a173754955e0ecd5635ab772b);
+        
+
+        marker_1c2559bd312df7815076abdf7fba27e6.bindPopup(popup_1c6caedce2d93bd82ead6a925f58f213)
+        ;
+
+        
+    
+    
+            var marker_f8c7249637ae5f1c845995a8cf5376b9 = L.marker(
+                [4.6729871, -74.0509647],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_923e1608464338375a4ce159035d83cc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f8c7249637ae5f1c845995a8cf5376b9.setIcon(icon_923e1608464338375a4ce159035d83cc);
+        
+    
+        var popup_e104c1a412a9d36fad5897f8e9e831d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d85098d4d041c5d36e13c61582a2c095 = $(`<div id="html_d85098d4d041c5d36e13c61582a2c095" style="width: 100.0%; height: 100.0%;">CARRERA 13 No. 89 - 42  Oficina 301</div>`)[0];
+            popup_e104c1a412a9d36fad5897f8e9e831d9.setContent(html_d85098d4d041c5d36e13c61582a2c095);
+        
+
+        marker_f8c7249637ae5f1c845995a8cf5376b9.bindPopup(popup_e104c1a412a9d36fad5897f8e9e831d9)
+        ;
+
+        
+    
+    
+            var marker_b17186dbb21611170269c10d1c7ae855 = L.marker(
+                [7.1148938, -73.1281837],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_7408e972ce6d3dcb52134af477f97c2d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b17186dbb21611170269c10d1c7ae855.setIcon(icon_7408e972ce6d3dcb52134af477f97c2d);
+        
+    
+        var popup_73b4906d05005102ff5d87bc2437bfd6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6a0e89b96df0588cf903f3a006aa0e9e = $(`<div id="html_6a0e89b96df0588cf903f3a006aa0e9e" style="width: 100.0%; height: 100.0%;">CARRERA 12 No.42-37</div>`)[0];
+            popup_73b4906d05005102ff5d87bc2437bfd6.setContent(html_6a0e89b96df0588cf903f3a006aa0e9e);
+        
+
+        marker_b17186dbb21611170269c10d1c7ae855.bindPopup(popup_73b4906d05005102ff5d87bc2437bfd6)
+        ;
+
+        
+    
+    
+            var marker_081448b859bf73dc5aa24b4583c2e767 = L.marker(
+                [7.1132122, -73.107519],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_f4cf1cb1b820de6c8f62d8bb7d88a563 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_081448b859bf73dc5aa24b4583c2e767.setIcon(icon_f4cf1cb1b820de6c8f62d8bb7d88a563);
+        
+    
+        var popup_31f93efaa03f4d2edb153dd2dd816e56 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2f2f05dcb0a67540735d1617f5ab5916 = $(`<div id="html_2f2f05dcb0a67540735d1617f5ab5916" style="width: 100.0%; height: 100.0%;">Carrera 37 #52-43 Oficina 902</div>`)[0];
+            popup_31f93efaa03f4d2edb153dd2dd816e56.setContent(html_2f2f05dcb0a67540735d1617f5ab5916);
+        
+
+        marker_081448b859bf73dc5aa24b4583c2e767.bindPopup(popup_31f93efaa03f4d2edb153dd2dd816e56)
+        ;
+
+        
+    
+    
+            var marker_132de78ad55678b658fadf1d7ea4a149 = L.marker(
+                [4.744345, -74.092166],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_d1a87fd465fdeebab1b255ddeb5acb8a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_132de78ad55678b658fadf1d7ea4a149.setIcon(icon_d1a87fd465fdeebab1b255ddeb5acb8a);
+        
+    
+        var popup_48c61885c6b8d2f49cd92d15fefb00c3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0a467b01502ca2e8009ab489d29408d0 = $(`<div id="html_0a467b01502ca2e8009ab489d29408d0" style="width: 100.0%; height: 100.0%;">CARRERA 101 # 147 - 21 LOCAL 38 CENTRO COMERCIAL FIESTA SUBA </div>`)[0];
+            popup_48c61885c6b8d2f49cd92d15fefb00c3.setContent(html_0a467b01502ca2e8009ab489d29408d0);
+        
+
+        marker_132de78ad55678b658fadf1d7ea4a149.bindPopup(popup_48c61885c6b8d2f49cd92d15fefb00c3)
+        ;
+
+        
+    
+    
+            var marker_7a5cbcef591941c33343fc4c694f3461 = L.marker(
+                [7.1314472, -73.1287343],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_e13caea2b1d7aaa5111680806b5ac964 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7a5cbcef591941c33343fc4c694f3461.setIcon(icon_e13caea2b1d7aaa5111680806b5ac964);
+        
+    
+        var popup_fbc0e78f1fb3b9da90312c0929fc2856 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d05f02f3ec04d76fb320128ad247c6d8 = $(`<div id="html_d05f02f3ec04d76fb320128ad247c6d8" style="width: 100.0%; height: 100.0%;">carrera 17 no 16-59 </div>`)[0];
+            popup_fbc0e78f1fb3b9da90312c0929fc2856.setContent(html_d05f02f3ec04d76fb320128ad247c6d8);
+        
+
+        marker_7a5cbcef591941c33343fc4c694f3461.bindPopup(popup_fbc0e78f1fb3b9da90312c0929fc2856)
+        ;
+
+        
+    
+    
+            var marker_39e48864a1f9183e8983f3cb0423c034 = L.marker(
+                [10.4742449, -73.2436335],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_b1c25853a9e7025d33f35d8d085a9ce8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_39e48864a1f9183e8983f3cb0423c034.setIcon(icon_b1c25853a9e7025d33f35d8d085a9ce8);
+        
+    
+        var popup_c12404a0b17a3893450f25f69b25e3e9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_983c121e508268dc8bd278e5ef4a9770 = $(`<div id="html_983c121e508268dc8bd278e5ef4a9770" style="width: 100.0%; height: 100.0%;">CALLE 22 No. 17-50 BRR SIMON BOLIVAR</div>`)[0];
+            popup_c12404a0b17a3893450f25f69b25e3e9.setContent(html_983c121e508268dc8bd278e5ef4a9770);
+        
+
+        marker_39e48864a1f9183e8983f3cb0423c034.bindPopup(popup_c12404a0b17a3893450f25f69b25e3e9)
+        ;
+
+        
+    
+    
+            var marker_2294197d6dd2f8929597fdc05682d84a = L.marker(
+                [7.0882981, -73.0759446],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_f7382ff36ab8171e9432616c316e3142 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_2294197d6dd2f8929597fdc05682d84a.setIcon(icon_f7382ff36ab8171e9432616c316e3142);
+        
+    
+        var popup_a87cb7177b093495c0357c73d959497c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3b633adfd91b275daf310fd3192dd7dc = $(`<div id="html_3b633adfd91b275daf310fd3192dd7dc" style="width: 100.0%; height: 100.0%;">CARRERA 21 No 30 -02</div>`)[0];
+            popup_a87cb7177b093495c0357c73d959497c.setContent(html_3b633adfd91b275daf310fd3192dd7dc);
+        
+
+        marker_2294197d6dd2f8929597fdc05682d84a.bindPopup(popup_a87cb7177b093495c0357c73d959497c)
+        ;
+
+        
+    
+    
+            var marker_11dc78b434b9d2f4709d39285f11b4c5 = L.marker(
+                [7.0882981, -73.0759446],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_21c504f0dd74ad10abd66bb1c1f939e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_11dc78b434b9d2f4709d39285f11b4c5.setIcon(icon_21c504f0dd74ad10abd66bb1c1f939e5);
+        
+    
+        var popup_51cac230579e4087c5f54d945ab03870 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0776f6d27aaea36b266d0e9ba6db6642 = $(`<div id="html_0776f6d27aaea36b266d0e9ba6db6642" style="width: 100.0%; height: 100.0%;">CALLE 26 N 8-02 LAGOS 1</div>`)[0];
+            popup_51cac230579e4087c5f54d945ab03870.setContent(html_0776f6d27aaea36b266d0e9ba6db6642);
+        
+
+        marker_11dc78b434b9d2f4709d39285f11b4c5.bindPopup(popup_51cac230579e4087c5f54d945ab03870)
+        ;
+
+        
+    
+    
+            var marker_275b6decbae00069f9eb2c308413b766 = L.marker(
+                [7.1166454, -73.122225],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_f7702d53f3b34e4f72f26af15c7124d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_275b6decbae00069f9eb2c308413b766.setIcon(icon_f7702d53f3b34e4f72f26af15c7124d1);
+        
+    
+        var popup_5b4d8b581dd025d7d1179102365c074f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_92ed8195460ed283b3002221469ca18b = $(`<div id="html_92ed8195460ed283b3002221469ca18b" style="width: 100.0%; height: 100.0%;">Cra 19 No. 41 - 10</div>`)[0];
+            popup_5b4d8b581dd025d7d1179102365c074f.setContent(html_92ed8195460ed283b3002221469ca18b);
+        
+
+        marker_275b6decbae00069f9eb2c308413b766.bindPopup(popup_5b4d8b581dd025d7d1179102365c074f)
+        ;
+
+        
+    
+    
+            var marker_bea9f2bc6ec9afa750585aacd98ccd2a = L.marker(
+                [7.1235199, -73.1290894],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_1c83b6403035db96e596ea4d313bd3ec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_bea9f2bc6ec9afa750585aacd98ccd2a.setIcon(icon_1c83b6403035db96e596ea4d313bd3ec);
+        
+    
+        var popup_3f88efd0f8a8f3fd43acd00ecd048668 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b4ecd2689af687ad134272906db6a690 = $(`<div id="html_b4ecd2689af687ad134272906db6a690" style="width: 100.0%; height: 100.0%;">Calle 28 #14-37</div>`)[0];
+            popup_3f88efd0f8a8f3fd43acd00ecd048668.setContent(html_b4ecd2689af687ad134272906db6a690);
+        
+
+        marker_bea9f2bc6ec9afa750585aacd98ccd2a.bindPopup(popup_3f88efd0f8a8f3fd43acd00ecd048668)
+        ;
+
+        
+    
+    
+            var marker_753ff7ed010c124def09a22f9ea18a3d = L.marker(
+                [7.0838302, -73.1075792],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_cf1d97ddd39de97d9baaddf539b53068 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_753ff7ed010c124def09a22f9ea18a3d.setIcon(icon_cf1d97ddd39de97d9baaddf539b53068);
+        
+    
+        var popup_ce603f435e72db7841364b3c5057dc44 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7172419de4ef3e65a9f652ee29943755 = $(`<div id="html_7172419de4ef3e65a9f652ee29943755" style="width: 100.0%; height: 100.0%;">calle 122 # 27A - 26</div>`)[0];
+            popup_ce603f435e72db7841364b3c5057dc44.setContent(html_7172419de4ef3e65a9f652ee29943755);
+        
+
+        marker_753ff7ed010c124def09a22f9ea18a3d.bindPopup(popup_ce603f435e72db7841364b3c5057dc44)
+        ;
+
+        
+    
+    
+            var marker_0c270321bb5bf8f9d60fc1d2419507fa = L.marker(
+                [7.1147946, -73.1130985],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_3017676b981cf94dd534aea3523f6339 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_0c270321bb5bf8f9d60fc1d2419507fa.setIcon(icon_3017676b981cf94dd534aea3523f6339);
+        
+    
+        var popup_3886561eeffd4ce966bf5d825f11ab62 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b5aed99f27e018dcc07b69f52691a101 = $(`<div id="html_b5aed99f27e018dcc07b69f52691a101" style="width: 100.0%; height: 100.0%;">CLL 50 #28-53</div>`)[0];
+            popup_3886561eeffd4ce966bf5d825f11ab62.setContent(html_b5aed99f27e018dcc07b69f52691a101);
+        
+
+        marker_0c270321bb5bf8f9d60fc1d2419507fa.bindPopup(popup_3886561eeffd4ce966bf5d825f11ab62)
+        ;
+
+        
+    
+    
+            var marker_932e2dc2a296e05bb9681e7a8d9d223e = L.marker(
+                [7.1181282, -73.1272976],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_3c8188f804b4ab4ed2f731971c198600 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_932e2dc2a296e05bb9681e7a8d9d223e.setIcon(icon_3c8188f804b4ab4ed2f731971c198600);
+        
+    
+        var popup_81729c1ebfe36f0555ad1ab5e3ce9190 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_46bf564fb92aadb61d53fd913e762701 = $(`<div id="html_46bf564fb92aadb61d53fd913e762701" style="width: 100.0%; height: 100.0%;">CALLE 35 No 14 - 08 BARRIO CENTRO</div>`)[0];
+            popup_81729c1ebfe36f0555ad1ab5e3ce9190.setContent(html_46bf564fb92aadb61d53fd913e762701);
+        
+
+        marker_932e2dc2a296e05bb9681e7a8d9d223e.bindPopup(popup_81729c1ebfe36f0555ad1ab5e3ce9190)
+        ;
+
+        
+    
+    
+            var marker_116b2df2def1a341b2a28a85b6e2209b = L.marker(
+                [4.631829, -74.1079491],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_b825575df319faafddb8378c0a185db9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_116b2df2def1a341b2a28a85b6e2209b.setIcon(icon_b825575df319faafddb8378c0a185db9);
+        
+    
+        var popup_982d9abfe2cbd02d99305e058f837788 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b2732168040229b429479c4620e6c28d = $(`<div id="html_b2732168040229b429479c4620e6c28d" style="width: 100.0%; height: 100.0%;">CRA 55 # 15- 90</div>`)[0];
+            popup_982d9abfe2cbd02d99305e058f837788.setContent(html_b2732168040229b429479c4620e6c28d);
+        
+
+        marker_116b2df2def1a341b2a28a85b6e2209b.bindPopup(popup_982d9abfe2cbd02d99305e058f837788)
+        ;
+
+        
+    
+    
+            var marker_fe03c8140c005945d8b78e0658289de2 = L.marker(
+                [7.1056064, -73.0951113],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_5c390cd9de0f7c4f6ed829a6ce0b346a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_fe03c8140c005945d8b78e0658289de2.setIcon(icon_5c390cd9de0f7c4f6ed829a6ce0b346a);
+        
+    
+        var popup_7fa461e09519cfd73a969958397f3468 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_223eb9983f00901bc4fba23e337cc891 = $(`<div id="html_223eb9983f00901bc4fba23e337cc891" style="width: 100.0%; height: 100.0%;">Vía cementerio Jardines la Colina, Parqueadero de buses de la UDES. Vereda santa Barbara, Casa 42 . Bucarmanga </div>`)[0];
+            popup_7fa461e09519cfd73a969958397f3468.setContent(html_223eb9983f00901bc4fba23e337cc891);
+        
+
+        marker_fe03c8140c005945d8b78e0658289de2.bindPopup(popup_7fa461e09519cfd73a969958397f3468)
+        ;
+
+        
+    
+    
+            var marker_a723595a9cb1b70fba1a9429cb00e32c = L.marker(
+                [7.1099425, -73.1091363],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_96f5937bfff2ff9a9d3227425a3c29e7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a723595a9cb1b70fba1a9429cb00e32c.setIcon(icon_96f5937bfff2ff9a9d3227425a3c29e7);
+        
+    
+        var popup_a40767a902556f783e36d144e0e439fc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1eb3496044f491f6fa081d0f49a9e50c = $(`<div id="html_1eb3496044f491f6fa081d0f49a9e50c" style="width: 100.0%; height: 100.0%;">CALLE 56 N.34-09</div>`)[0];
+            popup_a40767a902556f783e36d144e0e439fc.setContent(html_1eb3496044f491f6fa081d0f49a9e50c);
+        
+
+        marker_a723595a9cb1b70fba1a9429cb00e32c.bindPopup(popup_a40767a902556f783e36d144e0e439fc)
+        ;
+
+        
+    
+    
+            var marker_6864a0469aac1e769575087a389baa48 = L.marker(
+                [4.6868889, -74.1420334],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_e22e9bc538deacb8573be79b600bada1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6864a0469aac1e769575087a389baa48.setIcon(icon_e22e9bc538deacb8573be79b600bada1);
+        
+    
+        var popup_f1890b588a81cde3a9b9125873b6165a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d0d1cca77263495ab45e3da36528aa0e = $(`<div id="html_d0d1cca77263495ab45e3da36528aa0e" style="width: 100.0%; height: 100.0%;">CALLE 23G No 109-28 </div>`)[0];
+            popup_f1890b588a81cde3a9b9125873b6165a.setContent(html_d0d1cca77263495ab45e3da36528aa0e);
+        
+
+        marker_6864a0469aac1e769575087a389baa48.bindPopup(popup_f1890b588a81cde3a9b9125873b6165a)
+        ;
+
+        
+    
+    
+            var marker_76a282fe5cd03cd37d4deba44f2ded0c = L.marker(
+                [4.6918572, -74.1179399],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_82295f3a4e9b3954d39ac6052b9508f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_76a282fe5cd03cd37d4deba44f2ded0c.setIcon(icon_82295f3a4e9b3954d39ac6052b9508f4);
+        
+    
+        var popup_22b06c26a55b63fd7cdd6bd20c51730a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d8c1f8186a4e733ee3cb1d5be2c802a2 = $(`<div id="html_d8c1f8186a4e733ee3cb1d5be2c802a2" style="width: 100.0%; height: 100.0%;">CALLE 65 No. 95 - 28</div>`)[0];
+            popup_22b06c26a55b63fd7cdd6bd20c51730a.setContent(html_d8c1f8186a4e733ee3cb1d5be2c802a2);
+        
+
+        marker_76a282fe5cd03cd37d4deba44f2ded0c.bindPopup(popup_22b06c26a55b63fd7cdd6bd20c51730a)
+        ;
+
+        
+    
+    
+            var marker_bb2d08fd0aee38be17ed31225d99ea86 = L.marker(
+                [7.060645, -73.1110331],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_050198a23b985d809b2cbd4ddc579864 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_bb2d08fd0aee38be17ed31225d99ea86.setIcon(icon_050198a23b985d809b2cbd4ddc579864);
+        
+    
+        var popup_0506c09d40f981fb92d2c0a778336e05 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_90f922984de314c22408489652cc54e3 = $(`<div id="html_90f922984de314c22408489652cc54e3" style="width: 100.0%; height: 100.0%;">Carrera 12 # 200 -105 Condominio Mediterrane Conjunto Santorini To 3 Apto 901</div>`)[0];
+            popup_0506c09d40f981fb92d2c0a778336e05.setContent(html_90f922984de314c22408489652cc54e3);
+        
+
+        marker_bb2d08fd0aee38be17ed31225d99ea86.bindPopup(popup_0506c09d40f981fb92d2c0a778336e05)
+        ;
+
+        
+    
+    
+            var marker_8ba837962c5fbca5b77ac12ba8ed5725 = L.marker(
+                [7.0908699, -73.1686592],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_a406ffa6f95d7521ea87c76adcebfdb0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_8ba837962c5fbca5b77ac12ba8ed5725.setIcon(icon_a406ffa6f95d7521ea87c76adcebfdb0);
+        
+    
+        var popup_6d24bfdb146bb81a7d59a3f8ac7132b4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2811778b200e7e8a1102a6ccf889784e = $(`<div id="html_2811778b200e7e8a1102a6ccf889784e" style="width: 100.0%; height: 100.0%;">CL 59 No 15  50 LA ESMERALDA KM 6 VIA GIRON</div>`)[0];
+            popup_6d24bfdb146bb81a7d59a3f8ac7132b4.setContent(html_2811778b200e7e8a1102a6ccf889784e);
+        
+
+        marker_8ba837962c5fbca5b77ac12ba8ed5725.bindPopup(popup_6d24bfdb146bb81a7d59a3f8ac7132b4)
+        ;
+
+        
+    
+    
+            var marker_4dd727eb3f1728079f4edef1b5932e7a = L.marker(
+                [7.119349, -73.1227416],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_3778a1ba547738e4076f1a2daa414b95 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_4dd727eb3f1728079f4edef1b5932e7a.setIcon(icon_3778a1ba547738e4076f1a2daa414b95);
+        
+    
+        var popup_159ea9821cadfb333fabf3b10ce77aa6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3a4a685b8456d375993095761089dfba = $(`<div id="html_3a4a685b8456d375993095761089dfba" style="width: 100.0%; height: 100.0%;">CL 35 N. 16-24 PISO 8</div>`)[0];
+            popup_159ea9821cadfb333fabf3b10ce77aa6.setContent(html_3a4a685b8456d375993095761089dfba);
+        
+
+        marker_4dd727eb3f1728079f4edef1b5932e7a.bindPopup(popup_159ea9821cadfb333fabf3b10ce77aa6)
+        ;
+
+        
+    
+    
+            var marker_515005039a9e337b34990b07a06e48aa = L.marker(
+                [7.1041155, -73.11739],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_f65d04e9ae168a3dd1fcc29223143ce7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_515005039a9e337b34990b07a06e48aa.setIcon(icon_f65d04e9ae168a3dd1fcc29223143ce7);
+        
+    
+        var popup_6032ff466dc44232452f12fe20da20f9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a0f7d56c01945c512ed8d2d4cc4ebd30 = $(`<div id="html_a0f7d56c01945c512ed8d2d4cc4ebd30" style="width: 100.0%; height: 100.0%;">CARRERA 17A # 62-17 LA CEIBA</div>`)[0];
+            popup_6032ff466dc44232452f12fe20da20f9.setContent(html_a0f7d56c01945c512ed8d2d4cc4ebd30);
+        
+
+        marker_515005039a9e337b34990b07a06e48aa.bindPopup(popup_6032ff466dc44232452f12fe20da20f9)
+        ;
+
+        
+    
+    
+            var marker_1b74c0a9a94d2461bd36e20396165e26 = L.marker(
+                [7.119349, -73.1227416],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_f68279257804301339f2b52fac4ac3eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1b74c0a9a94d2461bd36e20396165e26.setIcon(icon_f68279257804301339f2b52fac4ac3eb);
+        
+    
+        var popup_0b2851e23e82c3fc2691b30c142ab35c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4dce6af51cee6822b27b08ae63f5d0d0 = $(`<div id="html_4dce6af51cee6822b27b08ae63f5d0d0" style="width: 100.0%; height: 100.0%;">CALLE 16 N25-65 BARRIO SAN FRANCISCO </div>`)[0];
+            popup_0b2851e23e82c3fc2691b30c142ab35c.setContent(html_4dce6af51cee6822b27b08ae63f5d0d0);
+        
+
+        marker_1b74c0a9a94d2461bd36e20396165e26.bindPopup(popup_0b2851e23e82c3fc2691b30c142ab35c)
+        ;
+
+        
+    
+    
+            var marker_89f10556ae156d5eed410d41503d0944 = L.marker(
+                [7.1144361, -73.1082483],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_03eb3d68aa2908dc754e82b7722771aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_89f10556ae156d5eed410d41503d0944.setIcon(icon_03eb3d68aa2908dc754e82b7722771aa);
+        
+    
+        var popup_c2515d0103c67f4dfca3f44393f00f5a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_190aeaa5bca6c4dd99a9caa3a72c2c69 = $(`<div id="html_190aeaa5bca6c4dd99a9caa3a72c2c69" style="width: 100.0%; height: 100.0%;">CRA 36 N. 51-53 2DO PISO</div>`)[0];
+            popup_c2515d0103c67f4dfca3f44393f00f5a.setContent(html_190aeaa5bca6c4dd99a9caa3a72c2c69);
+        
+
+        marker_89f10556ae156d5eed410d41503d0944.bindPopup(popup_c2515d0103c67f4dfca3f44393f00f5a)
+        ;
+
+        
+    
+    
+            var marker_b5bd0d7badc9a0fc5d6ec7df70fbffe9 = L.marker(
+                [7.119349, -73.1227416],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_18a7049d6ee84f8e577f61db6e90e369 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b5bd0d7badc9a0fc5d6ec7df70fbffe9.setIcon(icon_18a7049d6ee84f8e577f61db6e90e369);
+        
+    
+        var popup_fc54eb898f8dab0441c77915bb0401c8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e0c42dda062149ad5ac265a5250ed44d = $(`<div id="html_e0c42dda062149ad5ac265a5250ed44d" style="width: 100.0%; height: 100.0%;">Trasversal 93 No. 34 - 180 El Tejar</div>`)[0];
+            popup_fc54eb898f8dab0441c77915bb0401c8.setContent(html_e0c42dda062149ad5ac265a5250ed44d);
+        
+
+        marker_b5bd0d7badc9a0fc5d6ec7df70fbffe9.bindPopup(popup_fc54eb898f8dab0441c77915bb0401c8)
+        ;
+
+        
+    
+    
+            var marker_a9b621365876c6112c43e023cee72dc6 = L.marker(
+                [7.1040456, -73.1061282],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_085493e97f9f22b085e891954614988a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a9b621365876c6112c43e023cee72dc6.setIcon(icon_085493e97f9f22b085e891954614988a);
+        
+    
+        var popup_0eef68a3985f70cb65b9fd1d7937eb59 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8a15eb5cc3938b74a35473b59eab2027 = $(`<div id="html_8a15eb5cc3938b74a35473b59eab2027" style="width: 100.0%; height: 100.0%;">Cll 70 n 33-376</div>`)[0];
+            popup_0eef68a3985f70cb65b9fd1d7937eb59.setContent(html_8a15eb5cc3938b74a35473b59eab2027);
+        
+
+        marker_a9b621365876c6112c43e023cee72dc6.bindPopup(popup_0eef68a3985f70cb65b9fd1d7937eb59)
+        ;
+
+        
+    
+    
+            var marker_6167b28c980b08bcec94948d26a7d496 = L.marker(
+                [7.0576011, -73.8548871],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_59f4c5a51b406c0c9a95409ffd534a69 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6167b28c980b08bcec94948d26a7d496.setIcon(icon_59f4c5a51b406c0c9a95409ffd534a69);
+        
+    
+        var popup_3c359ca0e9ab75dcc9f7fac8ccc8aeb0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dea3781719ae615131be810a76c47cf0 = $(`<div id="html_dea3781719ae615131be810a76c47cf0" style="width: 100.0%; height: 100.0%;">CALLE 47 No. 23-14</div>`)[0];
+            popup_3c359ca0e9ab75dcc9f7fac8ccc8aeb0.setContent(html_dea3781719ae615131be810a76c47cf0);
+        
+
+        marker_6167b28c980b08bcec94948d26a7d496.bindPopup(popup_3c359ca0e9ab75dcc9f7fac8ccc8aeb0)
+        ;
+
+        
+    
+    
+            var marker_d8bee2cd6502500de951ea5dee4cc942 = L.marker(
+                [7.1020503, -73.1152261],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_a0b3b98386419985f2aca97d32ff549d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d8bee2cd6502500de951ea5dee4cc942.setIcon(icon_a0b3b98386419985f2aca97d32ff549d);
+        
+    
+        var popup_49057a88fa160a2fff93b4c2a2da3f1e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7eb127fef7bebe6894f4dc98b66d75e2 = $(`<div id="html_7eb127fef7bebe6894f4dc98b66d75e2" style="width: 100.0%; height: 100.0%;">CARRERA 23 #65-28 APTO 501</div>`)[0];
+            popup_49057a88fa160a2fff93b4c2a2da3f1e.setContent(html_7eb127fef7bebe6894f4dc98b66d75e2);
+        
+
+        marker_d8bee2cd6502500de951ea5dee4cc942.bindPopup(popup_49057a88fa160a2fff93b4c2a2da3f1e)
+        ;
+
+        
+    
+    
+            var marker_ac4c9456d90f3a3790f9f3eb5e45fffc = L.marker(
+                [7.1160426, -73.1212528],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_63384948f6a9a32d0a7d5826035d5ae5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ac4c9456d90f3a3790f9f3eb5e45fffc.setIcon(icon_63384948f6a9a32d0a7d5826035d5ae5);
+        
+    
+        var popup_6475f758514b25bfcb2e42c3d11cf2c0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ec7a77d9d1228260133dfcb7094ab174 = $(`<div id="html_ec7a77d9d1228260133dfcb7094ab174" style="width: 100.0%; height: 100.0%;">calle 45 n 19-67</div>`)[0];
+            popup_6475f758514b25bfcb2e42c3d11cf2c0.setContent(html_ec7a77d9d1228260133dfcb7094ab174);
+        
+
+        marker_ac4c9456d90f3a3790f9f3eb5e45fffc.bindPopup(popup_6475f758514b25bfcb2e42c3d11cf2c0)
+        ;
+
+        
+    
+    
+            var marker_718698d814f9709d3a5b821b82205c8a = L.marker(
+                [7.1191575, -73.1245477],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_083af5cad76531654906c6fca25ea5b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_718698d814f9709d3a5b821b82205c8a.setIcon(icon_083af5cad76531654906c6fca25ea5b1);
+        
+    
+        var popup_aa4edfdfbc22c418286f3719897f060e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_34f3519608e41936733d0ed194c9027f = $(`<div id="html_34f3519608e41936733d0ed194c9027f" style="width: 100.0%; height: 100.0%;">CALLE 35 No 17-56 OFC 1202 EDF. DAVIVIENDA</div>`)[0];
+            popup_aa4edfdfbc22c418286f3719897f060e.setContent(html_34f3519608e41936733d0ed194c9027f);
+        
+
+        marker_718698d814f9709d3a5b821b82205c8a.bindPopup(popup_aa4edfdfbc22c418286f3719897f060e)
+        ;
+
+        
+    
+    
+            var marker_e4419913c0eaf3fd814b7d7bfed746ea = L.marker(
+                [7.1264045, -73.1303842],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_f75881756e29410f90cb2c6648b194cc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e4419913c0eaf3fd814b7d7bfed746ea.setIcon(icon_f75881756e29410f90cb2c6648b194cc);
+        
+    
+        var popup_52d8d60dcecac181e45dec73d4b00b18 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_56086c050b2802cacc3e3e6dd752a5c1 = $(`<div id="html_56086c050b2802cacc3e3e6dd752a5c1" style="width: 100.0%; height: 100.0%;">CALLE 21 #13-60</div>`)[0];
+            popup_52d8d60dcecac181e45dec73d4b00b18.setContent(html_56086c050b2802cacc3e3e6dd752a5c1);
+        
+
+        marker_e4419913c0eaf3fd814b7d7bfed746ea.bindPopup(popup_52d8d60dcecac181e45dec73d4b00b18)
+        ;
+
+        
+    
+    
+            var marker_29196da8323e2db3310537807acc51f9 = L.marker(
+                [7.119349, -73.1227416],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_a1a05f8b8d30aacab3fe90fb85c7a80f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_29196da8323e2db3310537807acc51f9.setIcon(icon_a1a05f8b8d30aacab3fe90fb85c7a80f);
+        
+    
+        var popup_9366b612cdc7c916a1b286f48cd7e5fc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4f77407140f299218ad676d4f8f971ad = $(`<div id="html_4f77407140f299218ad676d4f8f971ad" style="width: 100.0%; height: 100.0%;">CL 35 16 24 OF 1107</div>`)[0];
+            popup_9366b612cdc7c916a1b286f48cd7e5fc.setContent(html_4f77407140f299218ad676d4f8f971ad);
+        
+
+        marker_29196da8323e2db3310537807acc51f9.bindPopup(popup_9366b612cdc7c916a1b286f48cd7e5fc)
+        ;
+
+        
+    
+    
+            var marker_395d91796c36abb8ad67168bcb19cae2 = L.marker(
+                [7.1186928, -73.1279993],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_016ca0bf09a73f3bf7ed952619210080 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_395d91796c36abb8ad67168bcb19cae2.setIcon(icon_016ca0bf09a73f3bf7ed952619210080);
+        
+    
+        var popup_169899e7e39dece115f6dbecf98cf84f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_44531c57c348e03dd1455766010739ba = $(`<div id="html_44531c57c348e03dd1455766010739ba" style="width: 100.0%; height: 100.0%;">CLL 34 #13 -42</div>`)[0];
+            popup_169899e7e39dece115f6dbecf98cf84f.setContent(html_44531c57c348e03dd1455766010739ba);
+        
+
+        marker_395d91796c36abb8ad67168bcb19cae2.bindPopup(popup_169899e7e39dece115f6dbecf98cf84f)
+        ;
+
+        
+    
+    
+            var marker_f0e829eed996640bb4dcca233c0ea49d = L.marker(
+                [7.1143029, -73.1275383],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_f31cf0a853f6c02d07bb4874074b6a11 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f0e829eed996640bb4dcca233c0ea49d.setIcon(icon_f31cf0a853f6c02d07bb4874074b6a11);
+        
+    
+        var popup_337d053dfdc6a46587b146aa8dd35c56 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4406188423d0fac43d217c68bda93cc7 = $(`<div id="html_4406188423d0fac43d217c68bda93cc7" style="width: 100.0%; height: 100.0%;">CALLE 43  12 51</div>`)[0];
+            popup_337d053dfdc6a46587b146aa8dd35c56.setContent(html_4406188423d0fac43d217c68bda93cc7);
+        
+
+        marker_f0e829eed996640bb4dcca233c0ea49d.bindPopup(popup_337d053dfdc6a46587b146aa8dd35c56)
+        ;
+
+        
+    
+    
+            var marker_cd71ee628f893cc0252c432bc71c114f = L.marker(
+                [7.1152425, -73.1264539],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_f411f7730214a85cf318c3cdf087ad15 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_cd71ee628f893cc0252c432bc71c114f.setIcon(icon_f411f7730214a85cf318c3cdf087ad15);
+        
+    
+        var popup_27b8bb0e6a4fad5fd6368e5f59c27f0e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_614615cd4732408675843ce00f954482 = $(`<div id="html_614615cd4732408675843ce00f954482" style="width: 100.0%; height: 100.0%;">CALLE 42 NO. 14-28</div>`)[0];
+            popup_27b8bb0e6a4fad5fd6368e5f59c27f0e.setContent(html_614615cd4732408675843ce00f954482);
+        
+
+        marker_cd71ee628f893cc0252c432bc71c114f.bindPopup(popup_27b8bb0e6a4fad5fd6368e5f59c27f0e)
+        ;
+
+        
+    
+    
+            var marker_60eb58ee4fd806bc8ed5202eab875bcc = L.marker(
+                [7.0627676, -73.0583591],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_a09b9ccf499138450eace04db91ff276 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_60eb58ee4fd806bc8ed5202eab875bcc.setIcon(icon_a09b9ccf499138450eace04db91ff276);
+        
+    
+        var popup_6e0ceb8355edbdd4f478f0ff7cc05f2c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0e388cf9332524ff8be6203f3d675164 = $(`<div id="html_0e388cf9332524ff8be6203f3d675164" style="width: 100.0%; height: 100.0%;">KM 1 VDA CASIANO BAJO HACIENDA LA ESPERANZA</div>`)[0];
+            popup_6e0ceb8355edbdd4f478f0ff7cc05f2c.setContent(html_0e388cf9332524ff8be6203f3d675164);
+        
+
+        marker_60eb58ee4fd806bc8ed5202eab875bcc.bindPopup(popup_6e0ceb8355edbdd4f478f0ff7cc05f2c)
+        ;
+
+        
+    
+    
+            var marker_c9acc098e6409bd51673061fdca83708 = L.marker(
+                [7.119349, -73.1227416],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_f00926af9955b187c53e7f8ecf55dab1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c9acc098e6409bd51673061fdca83708.setIcon(icon_f00926af9955b187c53e7f8ecf55dab1);
+        
+    
+        var popup_d0b8af571326615b50046cd18fba154f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dfe82d677e43655071b85d5d539348c3 = $(`<div id="html_dfe82d677e43655071b85d5d539348c3" style="width: 100.0%; height: 100.0%;">calle 29 No 11-50 lagos 1</div>`)[0];
+            popup_d0b8af571326615b50046cd18fba154f.setContent(html_dfe82d677e43655071b85d5d539348c3);
+        
+
+        marker_c9acc098e6409bd51673061fdca83708.bindPopup(popup_d0b8af571326615b50046cd18fba154f)
+        ;
+
+        
+    
+    
+            var marker_ee43765efbc1713bfe743e4fa4c5c499 = L.marker(
+                [7.1221637, -73.1110069],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_457a85498baae31359b428b82b55d5fb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ee43765efbc1713bfe743e4fa4c5c499.setIcon(icon_457a85498baae31359b428b82b55d5fb);
+        
+    
+        var popup_75131caff964da7f86ab1f02ec09c5cf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_10ac640c0a3de5e0ede60c2a49d49f50 = $(`<div id="html_10ac640c0a3de5e0ede60c2a49d49f50" style="width: 100.0%; height: 100.0%;">Cra 41#34-35</div>`)[0];
+            popup_75131caff964da7f86ab1f02ec09c5cf.setContent(html_10ac640c0a3de5e0ede60c2a49d49f50);
+        
+
+        marker_ee43765efbc1713bfe743e4fa4c5c499.bindPopup(popup_75131caff964da7f86ab1f02ec09c5cf)
+        ;
+
+        
+    
+    
+            var marker_12921df3b21668c0e0471ff017980144 = L.marker(
+                [6.991539, -73.053998],
+                {}
+            ).addTo(map_2915eb05b301c3157c32d27442bf4f32);
+        
+    
+            var icon_3906e41662919f6cea01c1a7503ea7ed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "truck", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_12921df3b21668c0e0471ff017980144.setIcon(icon_3906e41662919f6cea01c1a7503ea7ed);
+        
+    
+        var popup_038a47c30144baedc97afa1772392ba1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_13e854bbc418a3484a94904bfb7bcced = $(`<div id="html_13e854bbc418a3484a94904bfb7bcced" style="width: 100.0%; height: 100.0%;">Kilometro 2 via piedecuesta bogota</div>`)[0];
+            popup_038a47c30144baedc97afa1772392ba1.setContent(html_13e854bbc418a3484a94904bfb7bcced);
+        
+
+        marker_12921df3b21668c0e0471ff017980144.bindPopup(popup_038a47c30144baedc97afa1772392ba1)
+        ;
+
+        
+    
+    
+            var tile_layer_dcc28e5b37dbe89f248ab140623bd363 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_5885cdb41900482673bc40830b08ebc4 = new L.Control.MiniMap(
+                tile_layer_dcc28e5b37dbe89f248ab140623bd363,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_2915eb05b301c3157c32d27442bf4f32.addControl(mini_map_5885cdb41900482673bc40830b08ebc4);
+        
+</script>
+</html>
